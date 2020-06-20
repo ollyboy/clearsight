@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include clearsight *.css
+recursive-include clearsight *.csv
+recursive-include clearsight *.html
+recursive-include clearsight *.ico
+recursive-include clearsight *.js
+recursive-include clearsight *.json
+recursive-include clearsight *.md
+recursive-include clearsight *.png
+recursive-include clearsight *.py
+recursive-include clearsight *.svg
+recursive-include clearsight *.txt
+recursive-exclude clearsight *.pyc

@@ -1,0 +1,71 @@
+{
+ "autoname": "PH#####",
+ "creation": "2020-05-22 03:59:29.498976",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "csph_name",
+  "csph_date_from",
+  "csph_date_to",
+  "csph_planned_spend",
+  "csph_spend_contingency",
+  "csph_resource_share"
+ ],
+ "fields": [
+  {
+   "fieldname": "csph_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "csph_date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "fieldname": "csph_date_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "fieldname": "csph_planned_spend",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Planned Spend"
+  },
+  {
+   "fieldname": "csph_spend_contingency",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Spend Contingency"
+  },
+  {
+   "fieldname": "csph_resource_share",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Resource Share"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-06-07 05:50:35.747054",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Phase",
+ "nsm_parent_field": "parent_phase",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

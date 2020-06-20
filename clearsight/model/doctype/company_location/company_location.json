@@ -1,0 +1,47 @@
+{
+ "creation": "2020-05-21 05:17:46.605215",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cs_type",
+  "cs_name",
+  "cs_address",
+  "cs_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "cs_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Head Office\nOffshore"
+  },
+  {
+   "fieldname": "cs_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "cs_address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "cs_description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-06-06 00:38:45.201903",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Company Location",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

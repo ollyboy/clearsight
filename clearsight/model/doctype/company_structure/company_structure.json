@@ -1,0 +1,107 @@
+{
+ "autoname": "field:cscs_short_name",
+ "creation": "2020-06-06 03:35:46.471900",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cscs_short_name",
+  "cscs_full_name",
+  "cscs_parent",
+  "cscs_industry",
+  "cscs_is_group",
+  "cscs_cb001",
+  "cscs_tot_fte",
+  "cscs_total_budget",
+  "cscs_risk",
+  "cscs_health"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "cscs_short_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Short Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "cscs_full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "cscs_parent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parent",
+   "options": "Company Structure"
+  },
+  {
+   "fieldname": "cscs_risk",
+   "fieldtype": "Rating",
+   "label": "Overall Risk"
+  },
+  {
+   "fieldname": "cscs_tot_fte",
+   "fieldtype": "Int",
+   "label": "Total FTEs"
+  },
+  {
+   "fieldname": "cscs_total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget"
+  },
+  {
+   "default": "0",
+   "fieldname": "cscs_is_group",
+   "fieldtype": "Check",
+   "label": "Is a group"
+  },
+  {
+   "fieldname": "cscs_industry",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Industry",
+   "options": "Bank\nRetail\nInsurance\nFinTech\nRetail\nLogistics\nMining"
+  },
+  {
+   "fieldname": "cscs_cb001",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cscs_health",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Overall Health"
+  }
+ ],
+ "modified": "2020-06-12 06:47:36.528721",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Company Structure",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

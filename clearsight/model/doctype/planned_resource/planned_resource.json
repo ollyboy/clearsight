@@ -1,0 +1,43 @@
+{
+ "creation": "2020-05-22 04:11:49.809826",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cspr_name",
+  "cspr_cost",
+  "cspr_phase"
+ ],
+ "fields": [
+  {
+   "fieldname": "cspr_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "cspr_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost"
+  },
+  {
+   "fieldname": "cspr_phase",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Phase",
+   "options": "Phase"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-06-06 00:33:47.509559",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Planned Resource",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
