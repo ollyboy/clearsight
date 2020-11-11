@@ -1,77 +1,88 @@
 frappe.pages['project-charts'].on_page_load = function(wrapper) {
 
-
-        //frappe.require([
-        //  "assets/clearsight/js/frappe-charts.min.iife.js",
-        //  "assets/clearsight/css/frappe-charts.min.css"
-	//]);
-
-	var page = frappe.ui.make_app_page({
+   var page = frappe.ui.make_app_page({
 		parent: wrapper,
 		title: 'Project Charts',
 		single_column: true
 	});
+    
+    // hidden div 
+    wrapper = $(wrapper).find('.layout-main-section');
+    wrapper.append(`<div id="my_chart"></div>`);
 
 
-	wrapper = $(wrapper).find('.layout-main-section');
-	wrapper.append(`
-			<div id="my_chart"></div>
-		`);
+//new SlimSelect({
+//  select: '#slim-select'
+//})
 
+
+    // define empty arrays for chart call
+    var y_axis = [];
+    var plan_capex = [];
+    var actual_capex = [];
+    var plan_fte = [];
+    var actual_fte = [];
   
-	// import { Chart } from "frappe-charts/dist/frappe-charts.min.esm";
-        /*
-	const chart_data = {
-		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-		datasets: [
-			{
-				values:['0','10','20','30','40','50','60','70','50','40','30','20']
-			}
-		]
-	};
+    // read a data set from a summary doc
+    frappe.call({
+      method:"frappe.client.get_list",
+      args: {
+        doctype:"Finance Resource forcast",
+	    filters: [ ],
+        fields:["csfr_week_end", "csfr_plan_capex", "csfr_actual_capex", "csfr_plan_fte" , "csfr_actual_fte"  ]
+            }, 
+        
+      callback: function(data) {
 
-	const graph = new frappe.Chart({
-		parent: "#chart",
-		data: chart_data,
-		type: 'line'
-	});
+	    // build arrays suitable to pass to charts
+            for (let key in data) { 
+              	let value = data[key]; 
+              	for (i = 0; i < value.length; i++) { 
+              		plan_capex.push(value[i].csfr_plan_capex || 0 ); 
+              		actual_capex.push(value[i].csfr_actual_capex || 0 ); 
+              		plan_fte.push(value[i].csfr_plan_fte || 0); 
+              		actual_fte.push(value[i].csfr_actual_fte || 0 ); 
+              		y_axis.push(value[i].csfr_week_end || 0 );
+              		//console.log ( value[i].csfr_week_end );
+              	} 
+              }
+       }
+    });
 
-	graph.export();
-
-	setTimeout(function () {graph.refresh()}, 1);
-	*/
-
-
-  let chart = new frappe.Chart( "#my_chart", { // or DOM element
+    let chart = new frappe.Chart( "#my_chart", { // or DOM element
 	data: {
-	labels: ["12am-3am", "3am-6am", "6am-9am", "9am-12pm",
-		"12pm-3pm", "3pm-6pm", "6pm-9pm", "9pm-12am"],
+	
+		labels: y_axis,
 
 	datasets: [
 		{
-			name: "Some Data", chartType: 'bar',
-			values: [25, 40, 30, 35, 8, 52, 17, 4]
+			name: "Plan Capex", chartType: 'bar',
+			values: plan_capex
 		},
 		{
-			name: "Another Set", chartType: 'bar',
-			values: [25, 50, 10, 15, 18, 32, 27, 14]
+			name: "Actual Capex", chartType: 'bar',
+			values: actual_capex
 		},
 		{
-			name: "Yet Another", chartType: 'line',
-			values: [15, 20, 3, 15, 58, 12, 17, 37]
+			name: "Plan FTEs", chartType: 'line',
+			values: plan_fte
+		},
+		{
+			name: "Actual FTEs", chartType: 'line',
+			values: actual_fte
 		}
 	],
 
-	yMarkers: [{ label: "Marker", value: 70,
-		options: { labelPos: 'left' }}],
-	yRegions: [{ label: "Region", start: -10, end: 50,
-		options: { labelPos: 'right' }}]
+	//yMarkers: [{ label: "Marker", value: 70,
+	//	options: { labelPos: 'left' }}],
+	//yRegions: [{ label: "Region", start: -10, end: 50,
+	//	options: { labelPos: 'right' }}]
 	},
 
-	title: "My Awesome Chart",
+	title: "Finance Resource forcast",
 	type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
 	height: 300,
-	colors: ['purple', '#ffa3ef', 'light-blue'],
+	colors: ['purple', '#ffa3ef', 'light-blue', 'green'],
 
 	tooltipOptions: {
 		formatTooltipX: d => (d + '').toUpperCase(),
@@ -79,7 +90,7 @@ frappe.pages['project-charts'].on_page_load = function(wrapper) {
 	}
   });
 
-  // chart.export();
-  chart.update();
-  // setTimeout(function () { chart.refresh()}, 1);
+  // hacks to make the hidden div visible
+  setTimeout(function(){ window.dispatchEvent(new Event('resize')); }, 100);
+  
 }

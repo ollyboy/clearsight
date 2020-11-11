@@ -1,7 +1,7 @@
 // Copyright (c) 2020, steve mcd and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Program', {
+frappe.ui.form.on('Goal or Objective', {
 	// refresh: function(frm) {
 
 	// }

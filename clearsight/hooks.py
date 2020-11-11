@@ -24,8 +24,8 @@ app_license = "MIT"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
-page_js = {"page" : "public/js/frappe-charts.min.iife.js"}
-page_css = {"page" : "public/css/frappe-charts.min.css"}
+#page_js = {"page" : "public/js/frappe-charts.esm.js "}
+#page_css = {"page" : "public/css/frappe-charts.min.css"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}

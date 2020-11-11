@@ -1,87 +1,122 @@
 {
- "autoname": "field:cscs_short_name",
+ "autoname": "field:short_title",
  "creation": "2020-06-06 03:35:46.471900",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "cscs_short_name",
-  "cscs_full_name",
-  "cscs_parent",
-  "cscs_industry",
-  "cscs_is_group",
-  "cscs_cb001",
-  "cscs_tot_fte",
-  "cscs_total_budget",
-  "cscs_risk",
-  "cscs_health"
+  "short_title",
+  "full_title",
+  "parent_short_title",
+  "industry",
+  "stock_code",
+  "group",
+  "exclude",
+  "cb001",
+  "capex_fte",
+  "opex_fte",
+  "capex_budget",
+  "opex_budget",
+  "risk",
+  "health",
+  "contact"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
-   "fieldname": "cscs_short_name",
+   "fieldname": "short_title",
    "fieldtype": "Data",
    "in_global_search": 1,
-   "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Short Name",
+   "label": "Short Title",
+   "length": 8,
+   "reqd": 1,
+   "set_only_once": 1,
    "unique": 1
   },
   {
-   "fieldname": "cscs_full_name",
+   "fieldname": "full_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Name"
+   "label": "Full Title"
   },
   {
-   "fieldname": "cscs_parent",
+   "fieldname": "parent_short_title",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Parent",
    "options": "Company Structure"
   },
   {
-   "fieldname": "cscs_risk",
-   "fieldtype": "Rating",
-   "label": "Overall Risk"
-  },
-  {
-   "fieldname": "cscs_tot_fte",
-   "fieldtype": "Int",
-   "label": "Total FTEs"
-  },
-  {
-   "fieldname": "cscs_total_budget",
-   "fieldtype": "Currency",
-   "label": "Total Budget"
-  },
-  {
-   "default": "0",
-   "fieldname": "cscs_is_group",
-   "fieldtype": "Check",
-   "label": "Is a group"
-  },
-  {
-   "fieldname": "cscs_industry",
+   "fieldname": "industry",
    "fieldtype": "Select",
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Industry",
-   "options": "Bank\nRetail\nInsurance\nFinTech\nRetail\nLogistics\nMining"
+   "options": "Bank\nRetail\nInsurance\nFinTech\nRetail\nLogistics\nMining\nCommunications\nMotor\nConsumer Goods"
   },
   {
-   "fieldname": "cscs_cb001",
+   "fieldname": "stock_code",
+   "fieldtype": "Data",
+   "label": "Stock Code"
+  },
+  {
+   "fieldname": "cb001",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "cscs_health",
+   "fieldname": "risk",
+   "fieldtype": "Rating",
+   "label": "Risk"
+  },
+  {
+   "fieldname": "health",
    "fieldtype": "Rating",
    "in_list_view": 1,
-   "label": "Overall Health"
+   "label": "Health"
+  },
+  {
+   "default": "0",
+   "fieldname": "group",
+   "fieldtype": "Check",
+   "label": "Subsidiary group"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "exclude",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Exclude"
+  },
+  {
+   "fieldname": "capex_fte",
+   "fieldtype": "Int",
+   "label": "CAPEX FTEs"
+  },
+  {
+   "fieldname": "opex_fte",
+   "fieldtype": "Int",
+   "label": "OPEX FTEs"
+  },
+  {
+   "fieldname": "capex_budget",
+   "fieldtype": "Currency",
+   "label": "CAPEX Budget"
+  },
+  {
+   "fieldname": "opex_budget",
+   "fieldtype": "Currency",
+   "label": "OPEX Budget"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Key Contact"
   }
  ],
- "modified": "2020-06-12 06:47:36.528721",
+ "modified": "2020-11-11 01:41:57.618545",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Company Structure",

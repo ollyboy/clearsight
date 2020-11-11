@@ -1,0 +1,79 @@
+{
+ "autoname": "format:KR-{title}",
+ "creation": "2020-11-07 08:30:00.565108",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "description",
+  "target_date",
+  "target_type",
+  "target_value",
+  "milestone",
+  "dependency",
+  "intent"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Target Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_type",
+   "fieldtype": "Select",
+   "label": "Target Type",
+   "options": "% Uplift\n% Reduction\nAbsolute Value"
+  },
+  {
+   "fieldname": "target_value",
+   "fieldtype": "Data",
+   "label": "Target Value"
+  },
+  {
+   "fieldname": "milestone",
+   "fieldtype": "Data",
+   "label": "Milestone"
+  },
+  {
+   "fieldname": "dependency",
+   "fieldtype": "Link",
+   "label": "Dependency",
+   "options": "Key Results or Metrics Required"
+  },
+  {
+   "fetch_from": "goal_or_objective.intent",
+   "fieldname": "intent",
+   "fieldtype": "Link",
+   "label": "Master Intent",
+   "options": "Goal or Objective",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-11 14:43:47.984470",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Key Results or Metrics Required",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

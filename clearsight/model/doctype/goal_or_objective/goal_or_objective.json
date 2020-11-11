@@ -1,0 +1,91 @@
+{
+ "autoname": "format:{intent}-{title}",
+ "creation": "2020-11-08 08:30:55.445261",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "intent",
+  "description",
+  "duration",
+  "start_date",
+  "end_date",
+  "target_quality",
+  "key_results"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Link",
+   "label": "Strategic Intent",
+   "options": "Strategic Intent",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Duration",
+   "options": "Long-term(yr)\nMid-term(qtr)\nShort-term(mth)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_quality",
+   "fieldtype": "Small Text",
+   "label": "Target Quality Notes"
+  },
+  {
+   "fieldname": "key_results",
+   "fieldtype": "Table",
+   "label": "Key Results or Metrics Required",
+   "options": "Key Results or Metrics Required"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  }
+ ],
+ "modified": "2020-11-11 03:33:39.764105",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Goal or Objective",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

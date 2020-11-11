@@ -1,0 +1,158 @@
+{
+ "creation": "2020-06-27 00:49:32.872859",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "csfr_company",
+  "csfr_portfolio",
+  "csfr_program",
+  "csfr_project",
+  "csfr_type",
+  "csfr_week_end",
+  "csfr_month_end",
+  "csfr_year_end",
+  "csfr_plan_capex",
+  "csfr_plan_opex",
+  "csfr_plan_other",
+  "csfr_actual_capex",
+  "csfr_actual_opex",
+  "csfr_actual_cost",
+  "csfr_plan_fte",
+  "csfr_actual_fte",
+  "csfr_capacity_fte",
+  "csfr_plan_milestones",
+  "csfr_actaul_milestones",
+  "csfr_plan_releases",
+  "csfr_actual_releases"
+ ],
+ "fields": [
+  {
+   "fieldname": "csfr_company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "csfr_portfolio",
+   "fieldtype": "Data",
+   "label": "Portfolio"
+  },
+  {
+   "fieldname": "csfr_program",
+   "fieldtype": "Data",
+   "label": "Program"
+  },
+  {
+   "fieldname": "csfr_project",
+   "fieldtype": "Data",
+   "label": "Project"
+  },
+  {
+   "fieldname": "csfr_type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "csfr_week_end",
+   "fieldtype": "Date",
+   "label": "Week Ending"
+  },
+  {
+   "fieldname": "csfr_month_end",
+   "fieldtype": "Date",
+   "label": "Month Ending"
+  },
+  {
+   "fieldname": "csfr_year_end",
+   "fieldtype": "Date",
+   "label": "Year Ending"
+  },
+  {
+   "fieldname": "csfr_plan_capex",
+   "fieldtype": "Currency",
+   "label": "Plan Capex"
+  },
+  {
+   "fieldname": "csfr_plan_opex",
+   "fieldtype": "Currency",
+   "label": "Plan Opex"
+  },
+  {
+   "fieldname": "csfr_plan_other",
+   "fieldtype": "Currency",
+   "label": "Plan Other Cost"
+  },
+  {
+   "fieldname": "csfr_actual_capex",
+   "fieldtype": "Currency",
+   "label": "Actual Capex"
+  },
+  {
+   "fieldname": "csfr_actual_opex",
+   "fieldtype": "Currency",
+   "label": "Actual Opex"
+  },
+  {
+   "fieldname": "csfr_actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Other Cost"
+  },
+  {
+   "fieldname": "csfr_plan_fte",
+   "fieldtype": "Data",
+   "label": "Plan FTE hours"
+  },
+  {
+   "fieldname": "csfr_actual_fte",
+   "fieldtype": "Data",
+   "label": "Actual FTE hours"
+  },
+  {
+   "fieldname": "csfr_capacity_fte",
+   "fieldtype": "Data",
+   "label": "Capacity FTE hours"
+  },
+  {
+   "fieldname": "csfr_plan_milestones",
+   "fieldtype": "Data",
+   "label": "Plan Milestones"
+  },
+  {
+   "fieldname": "csfr_actaul_milestones",
+   "fieldtype": "Data",
+   "label": "Actual Milestones"
+  },
+  {
+   "fieldname": "csfr_plan_releases",
+   "fieldtype": "Data",
+   "label": "Plan Releases"
+  },
+  {
+   "fieldname": "csfr_actual_releases",
+   "fieldtype": "Data",
+   "label": "Actual Releases"
+  }
+ ],
+ "modified": "2020-06-27 00:49:32.872859",
+ "modified_by": "Administrator",
+ "module": "Summary",
+ "name": "Finance Resource forcast",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
