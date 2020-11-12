@@ -1,5 +1,5 @@
 {
- "autoname": "format:KR-{title}",
+ "autoname": "format:{parent}:{title}",
  "creation": "2020-11-07 08:30:00.565108",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -57,16 +57,15 @@
    "options": "Key Results or Metrics Required"
   },
   {
-   "fetch_from": "goal_or_objective.intent",
+   "fetch_from": "key_results_or_metrics_required.parent",
    "fieldname": "intent",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Master Intent",
-   "options": "Goal or Objective",
    "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2020-11-11 14:43:47.984470",
+ "modified": "2020-11-12 06:05:11.943168",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Key Results or Metrics Required",

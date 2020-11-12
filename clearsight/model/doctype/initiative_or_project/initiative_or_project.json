@@ -1,0 +1,96 @@
+{
+ "autoname": "format:{theme}-{title}",
+ "creation": "2020-11-12 06:56:31.543354",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "theme",
+  "top_line_budget",
+  "owner",
+  "portfolio",
+  "project_budget",
+  "feature_or_pi",
+  "planned_resource",
+  "planned_deliverable"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theme",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Theme or Headline Program",
+   "options": "Theme or Headline Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "top_line_budget",
+   "fieldtype": "Data",
+   "label": "Top-line Budget"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Data",
+   "label": "Owner"
+  },
+  {
+   "fieldname": "portfolio",
+   "fieldtype": "Data",
+   "label": "Portfolio"
+  },
+  {
+   "fieldname": "project_budget",
+   "fieldtype": "Data",
+   "label": "Project Budget"
+  },
+  {
+   "fieldname": "feature_or_pi",
+   "fieldtype": "Table",
+   "label": "Feature or Program Increment",
+   "options": "Feature or Program Increment"
+  },
+  {
+   "fieldname": "planned_resource",
+   "fieldtype": "Table",
+   "label": "Planned Resource",
+   "options": "Planned Resource"
+  },
+  {
+   "fieldname": "planned_deliverable",
+   "fieldtype": "Table",
+   "label": "Planned Deliverable",
+   "options": "Planned Deliverable"
+  }
+ ],
+ "modified": "2020-11-13 02:17:08.187075",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Initiative or Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

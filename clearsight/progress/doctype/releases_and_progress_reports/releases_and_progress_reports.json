@@ -1,0 +1,84 @@
+{
+ "creation": "2020-11-12 07:19:21.129325",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "initative",
+  "type",
+  "effective_date",
+  "results_achieved",
+  "description",
+  "document",
+  "features"
+ ],
+ "fields": [
+  {
+   "fieldname": "initative",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Initiative or Project",
+   "options": "Initiative or Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Product Release\nProgress Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "results_achieved",
+   "fieldtype": "Link",
+   "label": "Results Achieved",
+   "options": "Results Achieved"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Attach",
+   "label": "Document"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Data",
+   "label": "Features"
+  }
+ ],
+ "modified": "2020-11-13 02:12:38.695376",
+ "modified_by": "Administrator",
+ "module": "Progress",
+ "name": "Releases and Progress reports",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

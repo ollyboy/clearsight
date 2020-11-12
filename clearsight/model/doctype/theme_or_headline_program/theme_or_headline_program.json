@@ -1,0 +1,64 @@
+{
+ "autoname": "format:{master_goal}-{title}",
+ "creation": "2020-11-12 06:29:40.078626",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "description",
+  "master_goal",
+  "business_case"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "master_goal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Goal or Objective",
+   "options": "Goal or Objective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_case",
+   "fieldtype": "Attach",
+   "label": "Business Case"
+  }
+ ],
+ "modified": "2020-11-13 02:21:44.458993",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Theme or Headline Program",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -12,7 +12,8 @@
   "start_date",
   "end_date",
   "target_quality",
-  "key_results"
+  "key_results",
+  "t001"
  ],
  "fields": [
   {
@@ -20,7 +21,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Title",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "intent",
@@ -52,7 +54,8 @@
    "fieldname": "key_results",
    "fieldtype": "Table",
    "label": "Key Results or Metrics Required",
-   "options": "Key Results or Metrics Required"
+   "options": "Key Results or Metrics Required",
+   "set_only_once": 1
   },
   {
    "fieldname": "start_date",
@@ -63,9 +66,15 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives are \"inspirational\" and have measurable Results required</li>\n<li>Each objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Keep the title short like a tag name ie \"New Sales\", \"Cust Loyalty\".</li>\n</ol>"
   }
  ],
- "modified": "2020-11-11 03:33:39.764105",
+ "modified": "2020-11-13 09:09:13.456638",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",

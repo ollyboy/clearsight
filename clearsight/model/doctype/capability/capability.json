@@ -1,0 +1,70 @@
+{
+ "creation": "2020-11-13 02:44:05.009583",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "goal",
+  "planned_features",
+  "description",
+  "h001"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Goal or Objective",
+   "options": "Goal or Objective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_features",
+   "fieldtype": "Link",
+   "label": "Planned Features",
+   "options": "Feature or Program Increment"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "h001",
+   "fieldtype": "Heading",
+   "label": "About",
+   "options": "Capability achieved when..."
+  }
+ ],
+ "modified": "2020-11-13 02:56:27.511908",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Capability",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

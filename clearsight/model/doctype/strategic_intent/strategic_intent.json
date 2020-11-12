@@ -11,7 +11,8 @@
   "description",
   "exclude",
   "owner",
-  "priority"
+  "priority",
+  "t000"
  ],
  "fields": [
   {
@@ -19,7 +20,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Vision\nMission\nValue",
+   "options": "Vision\nMission\nValue\nBAU",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -60,9 +61,15 @@
    "fieldname": "priority",
    "fieldtype": "Rating",
    "label": "Priority"
+  },
+  {
+   "fieldname": "t000",
+   "fieldtype": "HTML",
+   "label": "t000",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives and Results required should link to a Strategic Objective.</li>\n<li>A placeholder of \"bau\" and/or \"mission\" is at minimum required.</li>\n<li>Strategic intent is a child of Period but is implemented as a master file linked to Period as many records will be implemented at this level and the associated Child level of Results required </li>\n<li>Keep the title short and brief ie \"sales growth\", \"expansion\" as Intent will propagate down into definitions for projects etc </li>\n</ol>"
   }
  ],
- "modified": "2020-11-11 02:47:35.296902",
+ "modified": "2020-11-13 08:42:43.724823",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Strategic Intent",

@@ -1,36 +1,36 @@
 {
+ "autoname": "format:{parent}-{title}",
  "creation": "2020-05-22 04:11:49.809826",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "cspr_name",
-  "cspr_cost",
-  "cspr_phase"
+  "title",
+  "cost",
+  "feature"
  ],
  "fields": [
   {
-   "fieldname": "cspr_name",
+   "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name"
+   "label": "Title"
   },
   {
-   "fieldname": "cspr_cost",
+   "fieldname": "cost",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Cost"
   },
   {
-   "fieldname": "cspr_phase",
+   "fieldname": "feature",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Phase",
-   "options": "Phase"
+   "label": "Feature or Program Increment",
+   "options": "Feature or Program Increment"
   }
  ],
  "istable": 1,
- "modified": "2020-06-06 00:33:47.509559",
+ "modified": "2020-11-12 07:35:39.958319",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planned Resource",

@@ -1,34 +1,19 @@
 {
- "autoname": "PD#####",
+ "autoname": "format:{parent}-{type}",
  "creation": "2020-06-07 04:22:36.462258",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "csdo_type",
-  "csdo_description",
-  "csdo_failure_impact",
-  "status"
+  "type",
+  "description",
+  "failure_impact",
+  "due_date",
+  "mandatory",
+  "status",
+  "t001"
  ],
  "fields": [
-  {
-   "fieldname": "csdo_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Type",
-   "options": "concept\nbusiness case\nrequirements definition\nbaseline plan\nbenefits register\nrisk register\nissue register\nchange register\nimplementation plan\npost implementation review",
-   "reqd": 1
-  },
-  {
-   "fieldname": "csdo_description",
-   "fieldtype": "Data",
-   "label": "Description"
-  },
-  {
-   "fieldname": "csdo_failure_impact",
-   "fieldtype": "Rating",
-   "label": "Failure impact"
-  },
   {
    "default": "Todo",
    "fieldname": "status",
@@ -36,10 +21,48 @@
    "label": "Status",
    "options": "Complete\nIn-progress\nTodo\nOn-hold\nCanceled",
    "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "concept\nbusiness case\nrequirements definition\nbaseline plan\nbenefits register\nrisk register\nissue register\nchange register\nimplementation plan\npost implementation review",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "failure_impact",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Failure impact"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Manditory"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>A deliverable is an artefact that needs to be completed before or during an Initiative/Project. It ensures compliance steps and best practice.</li>\n<li>It is not a business milestone or a \"result\" required form an Objective.</li>\n</ol>"
   }
  ],
  "istable": 1,
- "modified": "2020-06-07 04:23:11.076565",
+ "modified": "2020-11-13 06:39:43.484998",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planned Deliverable",

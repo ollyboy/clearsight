@@ -1,0 +1,47 @@
+{
+ "autoname": "format:{parent}:{key_result}:{result_date}",
+ "creation": "2020-11-13 02:07:00.688746",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "key_result",
+  "success",
+  "result_date",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "success",
+   "fieldtype": "Rating",
+   "label": "Success Level"
+  },
+  {
+   "fieldname": "result_date",
+   "fieldtype": "Date",
+   "label": "Result Date"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "key_result",
+   "fieldtype": "Link",
+   "label": "Parent Key Result",
+   "options": "Key Results or Metrics Required"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-13 02:11:54.719230",
+ "modified_by": "Administrator",
+ "module": "Progress",
+ "name": "Results Achieved",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

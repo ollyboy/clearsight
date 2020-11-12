@@ -11,7 +11,7 @@
   "start_date",
   "end_date",
   "exclude",
-  "intent"
+  "t001"
  ],
  "fields": [
   {
@@ -58,13 +58,14 @@
    "label": "Exclude"
   },
   {
-   "fieldname": "intent",
-   "fieldtype": "Table",
-   "label": "Stratigic Intent",
-   "options": "Strategic Intent"
+   "allow_in_quick_entry": 1,
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>Use Versions like 21/23 for years 2021-2023 or \"core\", \"draft\" etc to define versions.</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character</li>\n</ol>"
   }
  ],
- "modified": "2020-11-11 01:49:39.921403",
+ "modified": "2020-11-13 04:32:58.338495",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Period",

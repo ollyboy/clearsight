@@ -12,6 +12,7 @@
   "stock_code",
   "group",
   "exclude",
+  "t001",
   "cb001",
   "capex_fte",
   "opex_fte",
@@ -114,9 +115,16 @@
    "fieldname": "contact",
    "fieldtype": "Data",
    "label": "Key Contact"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>One company must exist to define planning periods.</li>\n<li>Multiple Subsidiary Companies or Groups can be defined by ticking group and selecting a master Company record.</li>\n<li>Make Short title as small as possible, preferably stock market ticker symbol</li>\n<li>Use only Alphanumeric characters in Short title.</li>\n</ol>"
   }
  ],
- "modified": "2020-11-11 01:41:57.618545",
+ "modified": "2020-11-13 04:13:12.525124",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Company Structure",
