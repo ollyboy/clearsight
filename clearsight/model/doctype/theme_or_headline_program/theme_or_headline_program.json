@@ -1,44 +1,69 @@
 {
- "autoname": "format:{master_goal}-{title}",
+ "autoname": "format:{period}:{short_title}",
  "creation": "2020-11-12 06:29:40.078626",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
+  "period",
+  "short_title",
+  "long_title",
   "description",
-  "master_goal",
-  "business_case"
+  "master_goals",
+  "business_case",
+  "portfolio"
  ],
  "fields": [
-  {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title",
-   "reqd": 1,
-   "unique": 1
-  },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
   },
   {
-   "fieldname": "master_goal",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Goal or Objective",
-   "options": "Goal or Objective",
-   "reqd": 1
-  },
-  {
    "fieldname": "business_case",
    "fieldtype": "Attach",
    "label": "Business Case"
+  },
+  {
+   "fieldname": "master_goals",
+   "fieldtype": "Table",
+   "label": "Goal or Objective Contribution",
+   "options": "Goals Theme Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "Period",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "portfolio",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Portfolio"
+  },
+  {
+   "fieldname": "long_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Long Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "short_title",
+   "fieldtype": "Data",
+   "label": "Short Title / Tag",
+   "length": 8,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   }
  ],
- "modified": "2020-11-13 02:21:44.458993",
+ "modified": "2020-11-17 08:34:49.084099",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Theme or Headline Program",

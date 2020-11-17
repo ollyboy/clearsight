@@ -1,0 +1,50 @@
+{
+ "autoname": "format:{parent}:{goal}",
+ "creation": "2020-11-14 09:14:27.184942",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goal",
+  "contribution",
+  "description",
+  "t001"
+ ],
+ "fields": [
+  {
+   "fieldname": "goal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Goal Impacted",
+   "options": "Goal or Objective"
+  },
+  {
+   "fieldname": "contribution",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Contribution"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>A theme can contribute to a percentage of a goal.</li>\n<li>Themes contributions for a given goal sould not normally add up to over 100%</li>\n<li>Reports will be required that ensure goals are not oversubscribed</li>\n</ol>"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-14 09:39:49.260299",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Goals Theme Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

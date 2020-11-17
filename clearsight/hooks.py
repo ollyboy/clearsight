@@ -7,7 +7,7 @@ app_title = "Clearsight"
 app_publisher = "steve mcd"
 app_description = "Project Portfolio Management"
 app_icon = "octicon octicon-file-directory"
-app_color = "grey"
+app_color = "black"
 app_email = "mcd.steven@gmail.com"
 app_license = "MIT"
 

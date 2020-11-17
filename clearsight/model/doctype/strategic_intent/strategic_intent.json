@@ -1,5 +1,5 @@
 {
- "autoname": "format:{period}:{type}:{title}",
+ "autoname": "format:{period} {title}",
  "creation": "2020-11-11 02:27:42.450315",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,9 +9,12 @@
   "period",
   "title",
   "description",
-  "exclude",
+  "status",
   "owner",
+  "intent_contact",
   "priority",
+  "period_company",
+  "period_version",
   "t000"
  ],
  "fields": [
@@ -47,15 +50,10 @@
    "label": "Description"
   },
   {
-   "default": "0",
-   "fieldname": "exclude",
-   "fieldtype": "Check",
-   "label": "Exclude"
-  },
-  {
    "fieldname": "owner",
    "fieldtype": "Data",
-   "label": "Owner"
+   "label": "Record Owner",
+   "read_only": 1
   },
   {
    "fieldname": "priority",
@@ -66,10 +64,38 @@
    "fieldname": "t000",
    "fieldtype": "HTML",
    "label": "t000",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives and Results required should link to a Strategic Objective.</li>\n<li>A placeholder of \"bau\" and/or \"mission\" is at minimum required.</li>\n<li>Strategic intent is a child of Period but is implemented as a master file linked to Period as many records will be implemented at this level and the associated Child level of Results required </li>\n<li>Keep the title short and brief ie \"sales growth\", \"expansion\" as Intent will propagate down into definitions for projects etc </li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives and Results required should link to a Strategic Objective.</li>\n<li>A placeholder of \"bau\" and/or \"mission\" is at minimum required.</li>\n<li>Strategic intent is a child of Period but is implemented as a master file linked to Period as many records will be keyed at this level and the associated Child level of Results required </li>\n<li>Keep the title short and brief ie \"sales growth\", \"expansion\" as Intent will propagate down into definitions for projects etc </li>\n</ol>"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nActive-Hidden\nClosed"
+  },
+  {
+   "fetch_from": "period.company",
+   "fieldname": "period_company",
+   "fieldtype": "Data",
+   "label": "Period Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "period.version",
+   "fieldname": "period_version",
+   "fieldtype": "Data",
+   "label": "Period Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "intent_contact",
+   "fieldtype": "Link",
+   "label": "Intent Owner / Contact",
+   "options": "User"
   }
  ],
- "modified": "2020-11-13 08:42:43.724823",
+ "modified": "2020-11-17 13:27:41.734364",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Strategic Intent",

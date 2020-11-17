@@ -1,4 +1,5 @@
 {
+ "autoname": "format:{goal}-{title}",
  "creation": "2020-11-13 02:44:05.009583",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -6,9 +7,9 @@
  "field_order": [
   "title",
   "goal",
-  "planned_features",
   "description",
-  "h001"
+  "dependent_capability",
+  "t001"
  ],
  "fields": [
   {
@@ -27,24 +28,24 @@
    "reqd": 1
   },
   {
-   "fieldname": "planned_features",
-   "fieldtype": "Link",
-   "label": "Planned Features",
-   "options": "Feature or Program Increment"
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
   },
   {
-   "fieldname": "h001",
-   "fieldtype": "Heading",
-   "label": "About",
-   "options": "Capability achieved when..."
+   "fieldname": "dependent_capability",
+   "fieldtype": "Link",
+   "label": "Dependent Capability",
+   "options": "Capability"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "Many capabilities may be needed enable a goal, Many PIs will need to be completed"
   }
  ],
- "modified": "2020-11-13 02:56:27.511908",
+ "modified": "2020-11-17 02:50:24.255721",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Capability",

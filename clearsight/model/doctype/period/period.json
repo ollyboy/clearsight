@@ -10,7 +10,11 @@
   "description",
   "start_date",
   "end_date",
-  "exclude",
+  "status",
+  "resource_health",
+  "finance_health",
+  "progress_health",
+  "risk_health",
   "t001"
  ],
  "fields": [
@@ -51,21 +55,51 @@
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "exclude",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Exclude"
-  },
-  {
    "allow_in_quick_entry": 1,
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>Use Versions like 21/23 for years 2021-2023 or \"core\", \"draft\" etc to define versions.</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>Period unique \"talking key\" is [company short title - version]</li>\n<li>Use Versions like 21/23 for years 2021-2023 or \"core\", \"draft\" etc to define versions.</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character. Do not use \":\" or \"-\" characters in names or versions.</li>\n<li>Health ratings will be calculated from Portfolio/Project summaries</li>\n</ol>"
+  },
+  {
+   "default": "5",
+   "fieldname": "resource_health",
+   "fieldtype": "Rating",
+   "label": "Resource Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "finance_health",
+   "fieldtype": "Rating",
+   "label": "Finance Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "progress_health",
+   "fieldtype": "Rating",
+   "label": "Progress Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "risk_health",
+   "fieldtype": "Rating",
+   "label": "Risk Health",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nActive-Hidden\nClosed"
   }
  ],
- "modified": "2020-11-13 04:32:58.338495",
+ "modified": "2020-11-17 02:03:05.260502",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Period",

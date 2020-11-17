@@ -8,12 +8,19 @@
   "title",
   "intent",
   "description",
-  "duration",
-  "start_date",
-  "end_date",
+  "kra",
+  "objective_start_date",
+  "objective_instigate_months",
+  "objective_planned_investment",
+  "benefit_start_date",
+  "benefit_duration_months",
+  "benefit_total_revenue",
+  "benefit_realisation_profile",
   "target_quality",
   "key_results",
-  "t001"
+  "intangible",
+  "t001",
+  "npv_hurdle_percentage"
  ],
  "fields": [
   {
@@ -38,14 +45,6 @@
    "label": "Description"
   },
   {
-   "fieldname": "duration",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Duration",
-   "options": "Long-term(yr)\nMid-term(qtr)\nShort-term(mth)",
-   "reqd": 1
-  },
-  {
    "fieldname": "target_quality",
    "fieldtype": "Small Text",
    "label": "Target Quality Notes"
@@ -58,23 +57,72 @@
    "set_only_once": 1
   },
   {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
-  },
-  {
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives are \"inspirational\" and have measurable Results required</li>\n<li>Each objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Keep the title short like a tag name ie \"New Sales\", \"Cust Loyalty\".</li>\n</ol>"
+  },
+  {
+   "fieldname": "kra",
+   "fieldtype": "Link",
+   "label": "Key Result Area",
+   "options": "Key Result Area"
+  },
+  {
+   "fieldname": "benefit_duration_months",
+   "fieldtype": "Int",
+   "label": "Benefit Duration Months",
+   "reqd": 1
+  },
+  {
+   "fieldname": "benefit_start_date",
+   "fieldtype": "Date",
+   "label": "Benefit Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "benefit_total_revenue",
+   "fieldtype": "Currency",
+   "label": "Benefit Total Revenue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "objective_start_date",
+   "fieldtype": "Date",
+   "label": "Objective Start Date"
+  },
+  {
+   "fieldname": "objective_instigate_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Objective Instigate Months"
+  },
+  {
+   "fieldname": "objective_planned_investment",
+   "fieldtype": "Currency",
+   "label": "Objective Planned Investment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "benefit_realisation_profile",
+   "fieldtype": "Select",
+   "label": "Benefit Realisation Profile",
+   "options": "Flat\nStart 10% and build\nStart 90% and fall",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "intangible",
+   "fieldtype": "Check",
+   "label": "intangible"
+  },
+  {
+   "fieldname": "npv_hurdle_percentage",
+   "fieldtype": "Data",
+   "label": "NPV hurdle percentage"
   }
  ],
- "modified": "2020-11-13 09:09:13.456638",
+ "modified": "2020-11-16 10:42:58.145784",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",

@@ -1,0 +1,72 @@
+{
+ "autoname": "format:{type}-{share}",
+ "creation": "2020-11-16 04:06:29.052548",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "share",
+  "avaiable_from_date",
+  "available_to_date",
+  "fte_quanity"
+ ],
+ "fields": [
+  {
+   "fieldname": "avaiable_from_date",
+   "fieldtype": "Date",
+   "label": "Avaiable From Date"
+  },
+  {
+   "fieldname": "available_to_date",
+   "fieldtype": "Date",
+   "label": "Available To Date"
+  },
+  {
+   "fieldname": "fte_quanity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "FTE Quality on Hand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Resource Type",
+   "options": "Resource Type",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "share",
+   "fieldtype": "Link",
+   "label": "Group or Subsidiary",
+   "options": "Company Structure",
+   "set_only_once": 1
+  }
+ ],
+ "modified": "2020-11-16 06:42:38.600689",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Resource Pool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

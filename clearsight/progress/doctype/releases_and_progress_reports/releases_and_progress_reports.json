@@ -1,26 +1,25 @@
 {
+ "autoname": "format:{feature} {effective_date}",
  "creation": "2020-11-12 07:19:21.129325",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "initative",
+  "feature",
   "type",
   "effective_date",
-  "results_achieved",
   "description",
-  "document",
-  "features"
+  "status",
+  "actual_capex_fte",
+  "actual_capex_expense",
+  "actual_opex",
+  "actual_other_cost",
+  "latest_risk_reported",
+  "latest_live_date_reported",
+  "latest_percent_done_reported",
+  "t001"
  ],
  "fields": [
-  {
-   "fieldname": "initative",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Initiative or Project",
-   "options": "Initiative or Project",
-   "reqd": 1
-  },
   {
    "fieldname": "type",
    "fieldtype": "Select",
@@ -37,28 +36,68 @@
    "reqd": 1
   },
   {
-   "fieldname": "results_achieved",
-   "fieldtype": "Link",
-   "label": "Results Achieved",
-   "options": "Results Achieved"
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "label": "Description / Summary"
   },
   {
-   "fieldname": "document",
-   "fieldtype": "Attach",
-   "label": "Document"
+   "fieldname": "feature",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Feature or Program Increment",
+   "options": "Feature or Program Increment",
+   "reqd": 1
   },
   {
-   "fieldname": "features",
+   "default": "Draft",
+   "fieldname": "status",
    "fieldtype": "Data",
-   "label": "Features"
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nSuspended\nCanceled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_capex_fte",
+   "fieldtype": "Data",
+   "label": "Actual CapEx FTE"
+  },
+  {
+   "fieldname": "actual_capex_expense",
+   "fieldtype": "Data",
+   "label": "Actual CapEx Expense"
+  },
+  {
+   "fieldname": "actual_opex",
+   "fieldtype": "Data",
+   "label": "Actual OpEx"
+  },
+  {
+   "fieldname": "actual_other_cost",
+   "fieldtype": "Data",
+   "label": "Actual Other Cost"
+  },
+  {
+   "fieldname": "latest_risk_reported",
+   "fieldtype": "Data",
+   "label": "Latest Risk Reported"
+  },
+  {
+   "fieldname": "latest_live_date_reported",
+   "fieldtype": "Data",
+   "label": " Latest Live Date Reported"
+  },
+  {
+   "fieldname": "latest_percent_done_reported",
+   "fieldtype": "Data",
+   "label": "Latest Percent done Reported"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "Data",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Actuals should be for this period only</li>\n</ol>"
   }
  ],
- "modified": "2020-11-13 02:12:38.695376",
+ "modified": "2020-11-18 09:29:28.814763",
  "modified_by": "Administrator",
  "module": "Progress",
  "name": "Releases and Progress reports",

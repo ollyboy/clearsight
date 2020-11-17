@@ -1,0 +1,82 @@
+{
+ "autoname": "format:{master_company}:{type} {person_contact}",
+ "creation": "2020-11-16 04:26:57.621221",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "master_company",
+  "type",
+  "person_contact",
+  "fte_hours",
+  "fte_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "IT-architect\nIT-Business Analyst\nIT-Project Manager\nCS-Manager\nSenior-IT-Developer\nJunior-IT-Developer\nIntern-Grad\nSME\nIT-Support\nTester\nData entry\nCXX\nTrainer\nStrategy-Lead\nFinance\nGeneral Manager",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "fte_hours",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "FTE Hours/Day",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "fte_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "FTE Cost/Hour",
+   "reqd": 1
+  },
+  {
+   "fieldname": "master_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company Structure",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "default": "Generic",
+   "fieldname": "person_contact",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Specific Person / Contact",
+   "options": "User",
+   "set_only_once": 1
+  }
+ ],
+ "modified": "2020-11-17 13:10:55.064305",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Resource Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

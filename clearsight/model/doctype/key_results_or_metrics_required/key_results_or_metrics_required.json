@@ -10,9 +10,10 @@
   "target_date",
   "target_type",
   "target_value",
-  "milestone",
   "dependency",
-  "intent"
+  "contribution",
+  "result_importance",
+  "parent_intent"
  ],
  "fields": [
   {
@@ -37,18 +38,15 @@
   {
    "fieldname": "target_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Target Type",
-   "options": "% Uplift\n% Reduction\nAbsolute Value"
+   "options": "% Uplift\n% Reduction\nAbsolute Value\nBusiness Milestone\nIntangible"
   },
   {
    "fieldname": "target_value",
    "fieldtype": "Data",
-   "label": "Target Value"
-  },
-  {
-   "fieldname": "milestone",
-   "fieldtype": "Data",
-   "label": "Milestone"
+   "in_list_view": 1,
+   "label": "Target or Baseline Value"
   },
   {
    "fieldname": "dependency",
@@ -57,15 +55,27 @@
    "options": "Key Results or Metrics Required"
   },
   {
+   "fieldname": "contribution",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Financial Contribution"
+  },
+  {
+   "fieldname": "result_importance",
+   "fieldtype": "Select",
+   "label": "Result Importance",
+   "options": "Mandatory\nEssential\nLow Impact\nOptional"
+  },
+  {
    "fetch_from": "key_results_or_metrics_required.parent",
-   "fieldname": "intent",
+   "fieldname": "parent_intent",
    "fieldtype": "Data",
-   "label": "Master Intent",
+   "label": "Parent Intent",
    "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2020-11-12 06:05:11.943168",
+ "modified": "2020-11-17 03:17:32.332904",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Key Results or Metrics Required",

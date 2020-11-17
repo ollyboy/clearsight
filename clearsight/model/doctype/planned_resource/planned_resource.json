@@ -1,36 +1,41 @@
 {
- "autoname": "format:{parent}-{title}",
+ "autoname": "format:{parent}-{feature}-{type}",
  "creation": "2020-05-22 04:11:49.809826",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "cost",
-  "feature"
+  "feature",
+  "type",
+  "fte_days"
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title"
-  },
-  {
-   "fieldname": "cost",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Cost"
-  },
-  {
    "fieldname": "feature",
    "fieldtype": "Link",
-   "label": "Feature or Program Increment",
-   "options": "Feature or Program Increment"
+   "in_list_view": 1,
+   "label": "Feature or PI",
+   "options": "Feature or Program Increment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Resource Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fte_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Required FTE days",
+   "reqd": 1
   }
  ],
  "istable": 1,
- "modified": "2020-11-12 07:35:39.958319",
+ "modified": "2020-11-16 06:55:23.166267",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planned Resource",

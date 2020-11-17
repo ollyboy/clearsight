@@ -1,20 +1,143 @@
 {
- "autoname": "format:BU-{csbu_name}",
+ "autoname": "format:{period}:{title}-{gl_code}",
  "creation": "2020-06-14 06:27:02.512191",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "csbu_name"
+  "period",
+  "gl_code",
+  "title",
+  "owner_contact",
+  "status",
+  "c001",
+  "capex",
+  "opex",
+  "other",
+  "other_type",
+  "s001",
+  "budget_consumption",
+  "initiative_capex_tot",
+  "initiative_opex_tot",
+  "initiative_other_tot",
+  "theme_capex_tot",
+  "theme_opex_tot",
+  "theme_other_tot"
  ],
  "fields": [
   {
-   "fieldname": "csbu_name",
+   "fieldname": "period",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "Period",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Not Defined",
+   "fieldname": "gl_code",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "GL Code",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Approved-Baseline",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "WIP\nProposed\nApproved-Baseline\nApproved-Revision\nSuspended\nCanceled\nConsumed",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "capex",
+   "fieldtype": "Currency",
+   "label": "CAPEX"
+  },
+  {
+   "default": "0",
+   "fieldname": "opex",
+   "fieldtype": "Currency",
+   "label": "OPEX"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Currency",
+   "label": "OTHER"
+  },
+  {
+   "fieldname": "other_type",
+   "fieldtype": "Select",
+   "label": "Other Type",
+   "options": "one-off\nhire\nopex/capex tba"
+  },
+  {
+   "fieldname": "c001",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "budget_consumption",
+   "fieldtype": "Table",
+   "label": "Budget Consumption",
+   "options": "Budget Consumption",
+   "read_only": 1
+  },
+  {
+   "fieldname": "s001",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "initiative_capex_tot",
+   "fieldtype": "Data",
+   "label": "Initiative CapEx Total"
+  },
+  {
+   "fieldname": "initiative_opex_tot",
+   "fieldtype": "Data",
+   "label": "Initiative OpEx Total"
+  },
+  {
+   "fieldname": "initiative_other_tot",
+   "fieldtype": "Data",
+   "label": "Initiative Other Total"
+  },
+  {
+   "fieldname": "theme_capex_tot",
+   "fieldtype": "Data",
+   "label": "Theme CapEx Total"
+  },
+  {
+   "fieldname": "theme_opex_tot",
+   "fieldtype": "Data",
+   "label": "Theme OpEx Total"
+  },
+  {
+   "fieldname": "theme_other_tot",
+   "fieldtype": "Data",
+   "label": "Theme Other Total"
+  },
+  {
+   "fieldname": "owner_contact",
+   "fieldtype": "Link",
+   "label": "Owner Contact",
+   "options": "User"
   }
  ],
- "modified": "2020-06-14 06:27:02.512191",
+ "modified": "2020-11-17 14:48:47.622699",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Budget",

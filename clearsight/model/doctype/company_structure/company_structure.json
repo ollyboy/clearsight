@@ -11,25 +11,24 @@
   "industry",
   "stock_code",
   "group",
-  "exclude",
+  "status",
   "t001",
   "cb001",
   "capex_fte",
   "opex_fte",
   "capex_budget",
   "opex_budget",
-  "risk",
-  "health",
-  "contact"
+  "key_contact"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
+   "columns": 2,
    "fieldname": "short_title",
    "fieldtype": "Data",
    "in_global_search": 1,
    "in_standard_filter": 1,
-   "label": "Short Title",
+   "label": "Short Title/Reference Tag",
    "length": 8,
    "reqd": 1,
    "set_only_once": 1,
@@ -39,7 +38,8 @@
    "fieldname": "full_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Title"
+   "label": "Full Title/Name",
+   "reqd": 1
   },
   {
    "fieldname": "parent_short_title",
@@ -49,6 +49,7 @@
    "options": "Company Structure"
   },
   {
+   "columns": 2,
    "fieldname": "industry",
    "fieldtype": "Select",
    "in_global_search": 1,
@@ -67,64 +68,60 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "risk",
-   "fieldtype": "Rating",
-   "label": "Risk"
-  },
-  {
-   "fieldname": "health",
-   "fieldtype": "Rating",
-   "in_list_view": 1,
-   "label": "Health"
-  },
-  {
    "default": "0",
    "fieldname": "group",
    "fieldtype": "Check",
    "label": "Subsidiary group"
   },
   {
-   "allow_in_quick_entry": 1,
    "default": "0",
-   "fieldname": "exclude",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Exclude"
-  },
-  {
    "fieldname": "capex_fte",
    "fieldtype": "Int",
-   "label": "CAPEX FTEs"
+   "label": "Nominal CapEx FTEs"
   },
   {
+   "default": "0",
    "fieldname": "opex_fte",
    "fieldtype": "Int",
-   "label": "OPEX FTEs"
+   "label": "Nominal OpEx FTEs"
   },
   {
+   "default": "0",
    "fieldname": "capex_budget",
    "fieldtype": "Currency",
-   "label": "CAPEX Budget"
+   "label": "Nominal CapEx Budget"
   },
   {
+   "default": "0",
    "fieldname": "opex_budget",
    "fieldtype": "Currency",
-   "label": "OPEX Budget"
-  },
-  {
-   "fieldname": "contact",
-   "fieldtype": "Data",
-   "label": "Key Contact"
+   "label": "Nominal OpEx Budget"
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>One company must exist to define planning periods.</li>\n<li>Multiple Subsidiary Companies or Groups can be defined by ticking group and selecting a master Company record.</li>\n<li>Make Short title as small as possible, preferably stock market ticker symbol</li>\n<li>Use only Alphanumeric characters in Short title.</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>One company must exist to define planning periods.</li>\n<li>Multiple Subsidiary Companies or Groups can be defined by ticking group and selecting a parent Company record.</li>\n<li>Make Short title as small as possible, preferably stock market ticker symbol</li>\n<li>Use only Alphanumeric characters in Short title.</li>\n</ol>"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nActive-Hidden\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "key_contact",
+   "fieldtype": "Link",
+   "label": "Key Contact",
+   "options": "User"
   }
  ],
- "modified": "2020-11-13 04:13:12.525124",
+ "modified": "2020-11-17 14:04:38.135893",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Company Structure",
