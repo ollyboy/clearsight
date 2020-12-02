@@ -1,35 +1,43 @@
 {
- "autoname": "format:{theme}-{title}",
+ "autoname": "format:{theme_key}-{initiative_title}",
  "creation": "2020-11-12 06:56:31.543354",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "theme",
+  "initiative_title",
+  "theme_key",
   "top_line_budget",
   "pm_contact",
   "sponser_contact",
-  "status",
+  "initiative_status",
   "t001",
   "cb001",
-  "description",
+  "initiative_story",
+  "forcast_capex_fte",
+  "forcast_capex_material",
+  "forcast_capex_other",
   "planned_capex_fte",
-  "planned_capex_expense",
-  "planned_opex",
-  "planned_other_cost",
+  "planned_capex_material",
+  "planned_capex_other",
+  "actual_capex_fte",
+  "actual_capex_material",
+  "actaul_capex_other",
+  "forcast_opex_fte",
+  "forcast_opex_material",
+  "forcast_opex_other",
+  "planned_opex_fte",
+  "planned_opex_material",
+  "planned_opex_other",
+  "actual_opex_fte",
+  "actual_opex_material",
+  "actual_opex_other",
   "initial_risk_estimate",
   "target_activate_date",
   "target_live_date",
   "s001",
-  "feature_or_pi",
-  "planned_resource",
   "planned_deliverable",
   "s002",
-  "actual_capex_fte",
-  "actual_capex_expense",
-  "actual_opex",
-  "actual_other_cost",
   "latest_risk_calc",
   "latest_live_date_calc",
   "latest_percent_done_calc",
@@ -39,19 +47,19 @@
  ],
  "fields": [
   {
-   "fieldname": "title",
+   "fieldname": "initiative_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title",
+   "label": "Initiative Title",
    "length": 24,
    "reqd": 1,
    "set_only_once": 1
   },
   {
-   "fieldname": "theme",
+   "fieldname": "theme_key",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Theme or Headline Program",
+   "label": "Theme Key / Parent",
    "options": "Theme or Headline Program",
    "reqd": 1,
    "set_only_once": 1
@@ -61,38 +69,6 @@
    "fieldtype": "Link",
    "label": "Top-line Budget",
    "options": "Budget"
-  },
-  {
-   "fieldname": "feature_or_pi",
-   "fieldtype": "Table",
-   "label": "Feature or Program Increment",
-   "options": "Feature or Program Increment"
-  },
-  {
-   "fieldname": "planned_resource",
-   "fieldtype": "Table",
-   "label": "Planned Resource",
-   "options": "Planned Resource"
-  },
-  {
-   "fieldname": "planned_deliverable",
-   "fieldtype": "Table",
-   "label": "Planned Deliverable",
-   "options": "Planned Deliverable"
-  },
-  {
-   "default": "0",
-   "fieldname": "planned_opex",
-   "fieldtype": "Currency",
-   "label": "Planned OpEx"
-  },
-  {
-   "default": "WIP",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Draft\nWIP\nProposed\nApproved-Baseline\nApproved-Revision\nSuspended\nCanceled\nConsumed",
-   "reqd": 1
   },
   {
    "fieldname": "pm_contact",
@@ -107,13 +83,12 @@
    "options": "User"
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
-  {
-   "fieldname": "s001",
-   "fieldtype": "Section Break"
+   "default": "WIP",
+   "fieldname": "initiative_status",
+   "fieldtype": "Select",
+   "label": "Initiative Status",
+   "options": "Draft\nWIP\nProposed\nApproved-Baseline\nApproved-Revision\nSuspended\nCanceled\nConsumed",
+   "reqd": 1
   },
   {
    "fieldname": "t001",
@@ -121,9 +96,28 @@
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Save the project before adding any Features/Phases/PI's</li>\n<li>Save the features/Phases/Pis before adding any resources</li>\n<li>Projects have no start or stop dates as these are defined by the features/PI's/Phases. At least one \"placeholder feature of project duration must be added for planning</li>\n</ol>"
   },
   {
-   "fieldname": "target_live_date",
-   "fieldtype": "Date",
-   "label": "Target Live Date"
+   "fieldname": "cb001",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "initiative_story",
+   "fieldtype": "Small Text",
+   "label": "Initiative Story"
+  },
+  {
+   "fieldname": "forcast_capex_fte",
+   "fieldtype": "Currency",
+   "label": "Forcast CapEx FTE"
+  },
+  {
+   "fieldname": "forcast_capex_material",
+   "fieldtype": "Currency",
+   "label": "Forcast CapEx Material"
+  },
+  {
+   "fieldname": "forcast_capex_other",
+   "fieldtype": "Currency",
+   "label": "Forcast CapEx Other"
   },
   {
    "default": "0",
@@ -132,20 +126,62 @@
    "label": "Planned CapEx FTE"
   },
   {
-   "fieldname": "cb001",
-   "fieldtype": "Column Break"
+   "default": "0",
+   "fieldname": "planned_capex_material",
+   "fieldtype": "Currency",
+   "label": "Planned CapEx Material"
+  },
+  {
+   "fieldname": "planned_capex_other",
+   "fieldtype": "Currency",
+   "label": "Planned CapEx Other"
+  },
+  {
+   "fieldname": "actual_capex_fte",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx FTE"
+  },
+  {
+   "fieldname": "actual_capex_material",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx Material"
+  },
+  {
+   "fieldname": "actaul_capex_other",
+   "fieldtype": "Currency",
+   "label": "Actaul CapEx Other"
   },
   {
    "default": "0",
-   "fieldname": "planned_capex_expense",
+   "fieldname": "planned_opex_fte",
    "fieldtype": "Currency",
-   "label": "Planned CapEx Expense"
+   "label": "Planned OpEx FTE"
   },
   {
    "default": "0",
-   "fieldname": "planned_other_cost",
+   "fieldname": "planned_opex_material",
    "fieldtype": "Currency",
-   "label": "Planned Other Cost"
+   "label": "Planned OpEx Material"
+  },
+  {
+   "fieldname": "planned_opex_other",
+   "fieldtype": "Currency",
+   "label": "Planned OpEx Other"
+  },
+  {
+   "fieldname": "actual_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx FTE"
+  },
+  {
+   "fieldname": "actual_opex_material",
+   "fieldtype": "Currency",
+   "label": " Actual OpEx Material"
+  },
+  {
+   "fieldname": "actual_opex_other",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Other"
   },
   {
    "fieldname": "initial_risk_estimate",
@@ -154,28 +190,28 @@
    "options": "Zero\nvery-low\nlow\nmedium\nhigh\nvery-high\nmoon-shot"
   },
   {
-   "fieldname": "s002",
+   "fieldname": "target_activate_date",
+   "fieldtype": "Date",
+   "label": "Target Activate Date"
+  },
+  {
+   "fieldname": "target_live_date",
+   "fieldtype": "Date",
+   "label": "Target Live Date"
+  },
+  {
+   "fieldname": "s001",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "actual_capex_fte",
-   "fieldtype": "Data",
-   "label": "Actual CapEx FTE"
+   "fieldname": "planned_deliverable",
+   "fieldtype": "Table",
+   "label": "Planned Deliverable",
+   "options": "Planned Deliverable"
   },
   {
-   "fieldname": "actual_capex_expense",
-   "fieldtype": "Data",
-   "label": "Actual CapEx Expense"
-  },
-  {
-   "fieldname": "actual_opex",
-   "fieldtype": "Data",
-   "label": "Actual OpEx"
-  },
-  {
-   "fieldname": "actual_other_cost",
-   "fieldtype": "Data",
-   "label": "Actual Other Cost"
+   "fieldname": "s002",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "latest_risk_calc",
@@ -208,12 +244,22 @@
    "label": "Latest Percent done Reported"
   },
   {
-   "fieldname": "target_activate_date",
-   "fieldtype": "Date",
-   "label": "Target Activate Date"
+   "fieldname": "forcast_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx FTE"
+  },
+  {
+   "fieldname": "forcast_opex_material",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx Material"
+  },
+  {
+   "fieldname": "forcast_opex_other",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx Other"
   }
  ],
- "modified": "2020-11-18 08:41:18.278932",
+ "modified": "2020-12-02 12:38:52.751602",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

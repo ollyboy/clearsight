@@ -1,0 +1,313 @@
+{
+ "autoname": "format:{initiative_key}-{feature_brief}",
+ "creation": "2020-11-27 01:29:44.087688",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "initiative_key",
+  "initiative_title",
+  "feature_brief",
+  "feature_title",
+  "feature_start_date",
+  "feature_end_date",
+  "t_shirt_size",
+  "feature_status",
+  "column_break_8",
+  "classic_phase",
+  "feature_dependency",
+  "parent_capability",
+  "feature_story",
+  "t001",
+  "section_break_12",
+  "plan_capex_fte",
+  "plan_capex_material",
+  "plan_capex_other",
+  "column_break_17",
+  "actual_capex_fte",
+  "actual_capex_material",
+  "actual_capex_other",
+  "section_break_21",
+  "plan_opex_fte",
+  "plan_opex_material",
+  "plan_opex_other",
+  "column_break_25",
+  "actual_opex_fte",
+  "actual_opex_material",
+  "actual_opex_other",
+  "section_break_29",
+  "latest_risk_reported",
+  "latest_live_date_reported",
+  "latest_percent_done_reported",
+  "planned_resource",
+  "initiative_brief",
+  "company",
+  "version"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "default": "NA, Agile Project",
+   "fieldname": "classic_phase",
+   "fieldtype": "Select",
+   "label": "Classic Phase",
+   "options": "NA, Agile Project\nPlan\nSpec\nDesign\nBuild\nTest\nImplement\nFull-project-placeholder"
+  },
+  {
+   "fieldname": "parent_capability",
+   "fieldtype": "Link",
+   "label": "Parent Capability",
+   "options": "Capability"
+  },
+  {
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>A Feature/PI/Phase is a service that fulfills a stakeholder need. Each feature includes a benefit hypothesis and acceptance criteria, and is sized or split as necessary to be delivered by a single Agile Release Train (ART) in a Program Increment (PI).\n</li><li>A feature can also be a waterfall style deliverable phase.</li>\n<li>A feature always has a parent of Initative/Project.</li>\n<li>Capabilities are sized and split into multiple features to facilitate their implementation in a single PI.</li>\n<li>Program Increment is a large \u201cindependent\u201d body of work that is time bound</li>\n<li>Maps to a top line \"Epic\" in Jira ( Not Jira Align )</li>\n</ol>"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "latest_risk_reported",
+   "fieldtype": "Percent",
+   "label": "Risk Reported"
+  },
+  {
+   "fieldname": "latest_live_date_reported",
+   "fieldtype": "Date",
+   "label": "Live Date Reported"
+  },
+  {
+   "fieldname": "latest_percent_done_reported",
+   "fieldtype": "Percent",
+   "label": "Complete Reported"
+  },
+  {
+   "fieldname": "initiative_key",
+   "fieldtype": "Link",
+   "label": "Initiative Key",
+   "options": "Initiative or Project",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "feature_brief",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feature Brief",
+   "length": 14,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "feature_title",
+   "fieldtype": "Data",
+   "label": "Feature Title"
+  },
+  {
+   "columns": 1,
+   "fieldname": "feature_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Feature Start Date",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "feature_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Feature End Date",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "t_shirt_size",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "T shirt Size",
+   "options": "Xtra-large\nLarge\nMedium\nSmall\nMicro",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "default": "Proposed",
+   "fieldname": "feature_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Feature Status",
+   "options": "Draft\nProposed\nActive\nHidden\nSuspended\nCanceled\nComplete",
+   "reqd": 1
+  },
+  {
+   "fieldname": "feature_story",
+   "fieldtype": "Small Text",
+   "label": "Feature Story"
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_capex_fte",
+   "fieldtype": "Currency",
+   "label": "Plan CapEx FTE",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_capex_material",
+   "fieldtype": "Currency",
+   "label": "Plan CapEx Material"
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_capex_other",
+   "fieldtype": "Currency",
+   "label": "Plan CapEx Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_capex_fte",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx FTE",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_capex_material",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx Material",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_capex_other",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx Other",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx FTE",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_opex_material",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx Material"
+  },
+  {
+   "default": "0",
+   "fieldname": "plan_opex_other",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx Other"
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx FTE",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_opex_material",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Material",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_opex_other",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Other",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feature_dependency",
+   "fieldtype": "Link",
+   "label": "Feature Dependency",
+   "options": "Feature or Program Increment or Phase"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_resource",
+   "fieldtype": "Table",
+   "label": "Planned Resource",
+   "options": "Planned Resource"
+  },
+  {
+   "fetch_from": "initiative_key.initiative_title",
+   "fieldname": "initiative_title",
+   "fieldtype": "Data",
+   "label": "Initiative Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "initiative_key.initiative_brief",
+   "fieldname": "initiative_brief",
+   "fieldtype": "Data",
+   "label": "Initiative Brief ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "initiative_key.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "initiative_key.version",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-12-03 12:40:49.188039",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Feature or Program Increment or Phase",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

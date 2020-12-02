@@ -1,0 +1,71 @@
+{
+ "autoname": "format:{parent} {type}",
+ "creation": "2020-11-18 11:19:44.963420",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource_type_key",
+  "consumed_fte_days",
+  "budget_class",
+  "fte_hours_per_day",
+  "fte_cost_per_hour",
+  "calculated_cost"
+ ],
+ "fields": [
+  {
+   "default": "CapEx",
+   "fieldname": "budget_class",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Class",
+   "options": "CapEx\nOpEx",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resource_type_key",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Resource Type Key",
+   "options": "Resource Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumed_fte_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Consumed FTE Days",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "resource_type_key.fte_hours_per_day",
+   "fieldname": "fte_hours_per_day",
+   "fieldtype": "Int",
+   "label": " FTE Hours per day",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "resource_type_key.fte_cost_per_hour",
+   "fieldname": "fte_cost_per_hour",
+   "fieldtype": "Currency",
+   "label": " FTE Cost per hour",
+   "read_only": 1
+  },
+  {
+   "fieldname": "calculated_cost",
+   "fieldtype": "Currency",
+   "label": "Calculated Cost"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-30 07:49:26.053811",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Resource Consumed",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

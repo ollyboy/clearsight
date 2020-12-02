@@ -1,0 +1,130 @@
+{
+ "autoname": "format:{period} {title}",
+ "creation": "2020-11-18 12:53:53.213241",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "period",
+  "title",
+  "type",
+  "release",
+  "goal",
+  "theme",
+  "initiative",
+  "feature",
+  "description",
+  "likelihood",
+  "reputation_impact",
+  "benifits_impact",
+  "resolve_by_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "Period",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "likelihood",
+   "fieldtype": "Percent",
+   "label": "Likelihood"
+  },
+  {
+   "fieldname": "reputation_impact",
+   "fieldtype": "Rating",
+   "label": "Reputation Impact"
+  },
+  {
+   "fieldname": "benifits_impact",
+   "fieldtype": "Rating",
+   "label": "Benifits Impact"
+  },
+  {
+   "fieldname": "resolve_by_date",
+   "fieldtype": "Date",
+   "label": "Resolve by Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "options": "Draft\nActive\nActive Escalated\nClosed Resolved\nClosed No Action\n"
+  },
+  {
+   "fieldname": "release",
+   "fieldtype": "Select",
+   "label": "Releases and Progress report",
+   "options": "Releases and Progress reports"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Select",
+   "label": "Goal or Objective",
+   "options": "Goal or Objective"
+  },
+  {
+   "fieldname": "theme",
+   "fieldtype": "Select",
+   "label": "Theme or Headline Program",
+   "options": "Theme or Headline Program"
+  },
+  {
+   "fieldname": "initiative",
+   "fieldtype": "Select",
+   "label": "Initiative or Project",
+   "options": "Initiative or Project"
+  },
+  {
+   "fieldname": "feature",
+   "fieldtype": "Select",
+   "label": "Feature or Program Increment",
+   "options": "Feature or Program Increment"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "type",
+   "options": "Major\nMinor\nIssue",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-11-18 13:06:05.074911",
+ "modified_by": "Administrator",
+ "module": "Progress",
+ "name": "Risk",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

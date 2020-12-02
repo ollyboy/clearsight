@@ -1,0 +1,129 @@
+{
+ "autoname": "format:{company}-{version}",
+ "creation": "2020-11-27 01:52:22.843094",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "version",
+  "period_title",
+  "period_start_date",
+  "period_end_date",
+  "period_status",
+  "resource_health",
+  "finance_health",
+  "progress_health",
+  "risk_health",
+  "t001"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company Structure",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version",
+   "length": 8,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "resource_health",
+   "fieldtype": "Rating",
+   "label": "Resource Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "finance_health",
+   "fieldtype": "Rating",
+   "label": "Finance Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "progress_health",
+   "fieldtype": "Rating",
+   "label": "Progress Health",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "risk_health",
+   "fieldtype": "Rating",
+   "label": "Risk Health",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "t001",
+   "fieldtype": "HTML",
+   "label": "t001",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>Period unique \"talking key\" is [company short title - version]</li>\n<li>Use Versions like 21/23 for years 2021-2023 or \"core\", \"draft\" etc to define versions.</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character. Do not use \":\" or \"-\" characters in names or versions.</li>\n<li>Health ratings will be calculated from Portfolio/Project summaries</li>\n</ol>"
+  },
+  {
+   "fieldname": "period_title",
+   "fieldtype": "Data",
+   "label": "Period Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "period_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Active",
+   "fieldname": "period_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nHidden\nClosed"
+  }
+ ],
+ "modified": "2020-11-27 07:45:03.612444",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Period or Planning Horizon",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
