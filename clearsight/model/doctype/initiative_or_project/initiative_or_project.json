@@ -7,6 +7,8 @@
  "field_order": [
   "initiative_title",
   "theme_key",
+  "company",
+  "version",
   "top_line_budget",
   "pm_contact",
   "sponser_contact",
@@ -14,24 +16,31 @@
   "t001",
   "cb001",
   "initiative_story",
+  "section_break_10",
   "forcast_capex_fte",
   "forcast_capex_material",
   "forcast_capex_other",
+  "column_break_14",
   "planned_capex_fte",
   "planned_capex_material",
   "planned_capex_other",
+  "section_break_18",
   "actual_capex_fte",
   "actual_capex_material",
-  "actaul_capex_other",
+  "actual_capex_other",
+  "section_break_22",
   "forcast_opex_fte",
   "forcast_opex_material",
   "forcast_opex_other",
+  "column_break_28",
   "planned_opex_fte",
   "planned_opex_material",
   "planned_opex_other",
+  "column_break_32",
   "actual_opex_fte",
   "actual_opex_material",
   "actual_opex_other",
+  "section_break_36",
   "initial_risk_estimate",
   "target_activate_date",
   "target_live_date",
@@ -41,6 +50,7 @@
   "latest_risk_calc",
   "latest_live_date_calc",
   "latest_percent_done_calc",
+  "column_break_46",
   "latest_risk_reported",
   "latest_live_date_reported",
   "latest_percent_done_reported"
@@ -145,11 +155,6 @@
    "fieldname": "actual_capex_material",
    "fieldtype": "Currency",
    "label": "Actual CapEx Material"
-  },
-  {
-   "fieldname": "actaul_capex_other",
-   "fieldtype": "Currency",
-   "label": "Actaul CapEx Other"
   },
   {
    "default": "0",
@@ -257,9 +262,60 @@
    "fieldname": "forcast_opex_other",
    "fieldtype": "Currency",
    "label": "Forcast OpEx Other"
+  },
+  {
+   "fetch_from": "theme_key.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "theme_key.version",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_capex_other",
+   "fieldtype": "Currency",
+   "label": "Actual CapEx Other"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_36",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-12-02 12:38:52.751602",
+ "modified": "2020-12-03 05:28:12.036931",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

@@ -5,37 +5,56 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "feature",
-  "type",
-  "fte_days"
+  "resource_type_key",
+  "required_fte_days",
+  "budget_class",
+  "fte_hours_per_day",
+  "fte_cost_per_hour",
+  "calculated_cost"
  ],
  "fields": [
   {
-   "fieldname": "feature",
+   "fieldname": "resource_type_key",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Feature or PI",
-   "options": "Feature or Program Increment",
-   "reqd": 1
-  },
-  {
-   "fieldname": "type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Type",
+   "label": " Resource Type Key",
    "options": "Resource Type",
    "reqd": 1
   },
   {
-   "fieldname": "fte_days",
+   "fieldname": "required_fte_days",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Required FTE days",
    "reqd": 1
+  },
+  {
+   "fieldname": "budget_class",
+   "fieldtype": "Select",
+   "label": " Budget Class",
+   "options": "CapEx\nOpEx",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "resource_type_key.fte_hours_per_day",
+   "fieldname": "fte_hours_per_day",
+   "fieldtype": "Data",
+   "label": " FTE Hours per day"
+  },
+  {
+   "fetch_from": "resource_type_key.fte_cost_per_hour",
+   "fieldname": "fte_cost_per_hour",
+   "fieldtype": "Currency",
+   "label": " FTE Cost per hour"
+  },
+  {
+   "fieldname": "calculated_cost",
+   "fieldtype": "Currency",
+   "label": " Calculated Cost"
   }
  ],
  "istable": 1,
- "modified": "2020-11-16 06:55:23.166267",
+ "modified": "2020-12-03 05:08:53.856576",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planned Resource",

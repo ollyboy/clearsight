@@ -1,17 +1,17 @@
 {
- "autoname": "field:short_title",
+ "autoname": "field:company_brief",
  "creation": "2020-06-06 03:35:46.471900",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "short_title",
-  "full_title",
-  "parent_short_title",
+  "company_brief",
+  "company_title",
+  "parent_company",
   "industry",
   "stock_code",
   "group",
-  "status",
+  "company_status",
   "t001",
   "cb001",
   "capex_fte",
@@ -22,33 +22,6 @@
  ],
  "fields": [
   {
-   "allow_in_quick_entry": 1,
-   "columns": 2,
-   "fieldname": "short_title",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_standard_filter": 1,
-   "label": "Short Title/Reference Tag",
-   "length": 8,
-   "reqd": 1,
-   "set_only_once": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "full_title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Full Title/Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "parent_short_title",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Parent",
-   "options": "Company Structure"
-  },
-  {
    "columns": 2,
    "fieldname": "industry",
    "fieldtype": "Select",
@@ -56,7 +29,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Industry",
-   "options": "Bank\nRetail\nInsurance\nFinTech\nRetail\nLogistics\nMining\nCommunications\nMotor\nConsumer Goods"
+   "options": "Bank\nRetail\nInsurance\nFinTech\nRetail\nLogistics\nMining\nCommunications\nMotor\nConsumer Goods",
+   "reqd": 1
   },
   {
    "fieldname": "stock_code",
@@ -105,23 +79,50 @@
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>One company must exist to define planning periods.</li>\n<li>Multiple Subsidiary Companies or Groups can be defined by ticking group and selecting a parent Company record.</li>\n<li>Make Short title as small as possible, preferably stock market ticker symbol</li>\n<li>Use only Alphanumeric characters in Short title.</li>\n</ol>"
   },
   {
+   "fieldname": "key_contact",
+   "fieldtype": "Link",
+   "label": "Key Contact",
+   "options": "User"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "fieldname": "company_brief",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Brief Title / Short Name",
+   "length": 8,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Title / Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parent Company",
+   "options": "Company Structure"
+  },
+  {
    "allow_in_quick_entry": 1,
    "default": "Active",
-   "fieldname": "status",
+   "fieldname": "company_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
    "options": "Draft\nActive\nActive-Hidden\nClosed",
    "reqd": 1
-  },
-  {
-   "fieldname": "key_contact",
-   "fieldtype": "Link",
-   "label": "Key Contact",
-   "options": "User"
   }
  ],
- "modified": "2020-11-17 14:04:38.135893",
+ "modified": "2020-12-03 05:37:43.973746",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Company Structure",
