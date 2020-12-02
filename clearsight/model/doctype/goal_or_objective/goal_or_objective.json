@@ -1,49 +1,33 @@
 {
- "autoname": "format:{intent}-{title}",
+ "autoname": "format:{intent_key}-{goal_brief}",
  "creation": "2020-11-08 08:30:55.445261",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "intent",
-  "description",
-  "kra",
-  "objective_start_date",
-  "objective_instigate_months",
-  "objective_planned_investment",
+  "goal_brief",
+  "intent_key",
+  "goal_title",
+  "goal_story",
+  "column_break_5",
+  "goal_kra",
+  "goal_start_date",
+  "goal_instigate_months",
+  "goal_forcast_investment",
+  "npv_hurdle_percentage",
+  "intangible",
+  "t001",
+  "section_break_11",
   "benefit_start_date",
   "benefit_duration_months",
   "benefit_total_revenue",
   "benefit_realisation_profile",
+  "column_break_16",
   "target_quality",
-  "key_results",
-  "intangible",
-  "t001",
-  "npv_hurdle_percentage"
+  "section_break_17",
+  "key_results"
  ],
  "fields": [
-  {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
-   "fieldname": "intent",
-   "fieldtype": "Link",
-   "label": "Strategic Intent",
-   "options": "Strategic Intent",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
   {
    "fieldname": "target_quality",
    "fieldtype": "Small Text",
@@ -54,6 +38,7 @@
    "fieldtype": "Table",
    "label": "Key Results or Metrics Required",
    "options": "Key Results or Metrics Required",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -61,12 +46,6 @@
    "fieldtype": "HTML",
    "label": "t001",
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives are \"inspirational\" and have measurable Results required</li>\n<li>Each objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Keep the title short like a tag name ie \"New Sales\", \"Cust Loyalty\".</li>\n</ol>"
-  },
-  {
-   "fieldname": "kra",
-   "fieldtype": "Link",
-   "label": "Key Result Area",
-   "options": "Key Result Area"
   },
   {
    "fieldname": "benefit_duration_months",
@@ -77,30 +56,15 @@
   {
    "fieldname": "benefit_start_date",
    "fieldtype": "Date",
-   "label": "Benefit Start Date",
+   "label": "Benifit Start Date",
    "reqd": 1
   },
   {
    "fieldname": "benefit_total_revenue",
    "fieldtype": "Currency",
-   "label": "Benefit Total Revenue",
-   "reqd": 1
-  },
-  {
-   "fieldname": "objective_start_date",
-   "fieldtype": "Date",
-   "label": "Objective Start Date"
-  },
-  {
-   "fieldname": "objective_instigate_months",
-   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Objective Instigate Months"
-  },
-  {
-   "fieldname": "objective_planned_investment",
-   "fieldtype": "Currency",
-   "label": "Objective Planned Investment",
+   "label": "Benefit Total Revenue",
+   "precision": "0",
    "reqd": 1
   },
   {
@@ -114,15 +78,81 @@
    "default": "0",
    "fieldname": "intangible",
    "fieldtype": "Check",
-   "label": "intangible"
+   "label": "Goal is Intangible"
   },
   {
    "fieldname": "npv_hurdle_percentage",
    "fieldtype": "Data",
    "label": "NPV hurdle percentage"
+  },
+  {
+   "fieldname": "goal_brief",
+   "fieldtype": "Data",
+   "label": "Goal Brief / Short Name",
+   "length": 12,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "intent_key",
+   "fieldtype": "Link",
+   "label": "Strategic Intent",
+   "options": "Strategic Intent",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "goal_title",
+   "fieldtype": "Data",
+   "label": "Goal Title / Full Name"
+  },
+  {
+   "fieldname": "goal_story",
+   "fieldtype": "Small Text",
+   "label": "Description / Story"
+  },
+  {
+   "fieldname": "goal_kra",
+   "fieldtype": "Link",
+   "label": "Key Result Area",
+   "options": "Key Result Area"
+  },
+  {
+   "fieldname": "goal_start_date",
+   "fieldtype": "Date",
+   "label": "Goal Start Date"
+  },
+  {
+   "fieldname": "goal_instigate_months",
+   "fieldtype": "Int",
+   "label": "Goal Instigate Months"
+  },
+  {
+   "fieldname": "goal_forcast_investment",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Goal Forcast Investment",
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-11-16 10:42:58.145784",
+ "modified": "2020-12-03 08:51:27.785975",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",
@@ -141,7 +171,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
