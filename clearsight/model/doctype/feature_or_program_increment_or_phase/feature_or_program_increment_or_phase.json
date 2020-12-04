@@ -7,6 +7,7 @@
  "field_order": [
   "initiative_key",
   "initiative_title",
+  "initiative_brief",
   "feature_brief",
   "feature_title",
   "feature_start_date",
@@ -90,7 +91,8 @@
    "fieldtype": "Link",
    "label": "Initiative Key",
    "options": "Initiative or Project",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "columns": 2,
@@ -285,9 +287,16 @@
    "fieldname": "color",
    "fieldtype": "Color",
    "label": "Color"
+  },
+  {
+   "fetch_from": "initiative_key.initiative_brief",
+   "fieldname": "initiative_brief",
+   "fieldtype": "Data",
+   "label": "Initiative Brief",
+   "read_only": 1
   }
  ],
- "modified": "2020-12-05 07:20:13.292470",
+ "modified": "2020-12-05 08:25:12.608315",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",

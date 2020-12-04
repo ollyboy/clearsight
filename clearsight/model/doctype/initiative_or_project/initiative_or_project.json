@@ -1,10 +1,11 @@
 {
- "autoname": "format:{theme_key}-{initiative_title}",
+ "autoname": "format:{theme_key}-{initiative_brief}",
  "creation": "2020-11-12 06:56:31.543354",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "initiative_brief",
   "initiative_title",
   "theme_key",
   "company",
@@ -61,8 +62,8 @@
    "fieldname": "initiative_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Initiative Title",
-   "length": 24,
+   "label": "Full Initiative Title",
+   "length": 36,
    "reqd": 1,
    "set_only_once": 1
   },
@@ -321,9 +322,16 @@
    "fieldname": "color",
    "fieldtype": "Color",
    "label": "color"
+  },
+  {
+   "fieldname": "initiative_brief",
+   "fieldtype": "Data",
+   "label": "Brief Title / Nick Name",
+   "length": 10,
+   "reqd": 1
   }
  ],
- "modified": "2020-12-05 04:53:22.107443",
+ "modified": "2020-12-05 08:17:08.504515",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",
