@@ -13,6 +13,7 @@
   "feature_end_date",
   "t_shirt_size",
   "feature_status",
+  "color",
   "column_break_8",
   "classic_phase",
   "feature_dependency",
@@ -41,8 +42,7 @@
   "latest_percent_done_reported",
   "planned_resource",
   "company",
-  "version",
-  "color"
+  "version"
  ],
  "fields": [
   {
@@ -285,7 +285,7 @@
    "label": "Color"
   }
  ],
- "modified": "2020-12-05 02:18:01.875460",
+ "modified": "2020-12-05 05:05:03.184815",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",
