@@ -1,5 +1,5 @@
 {
- "autoname": "format:{initiative_key}-{feature_brief}",
+ "autoname": "format:{initiative_key}:{feature_brief}",
  "creation": "2020-11-27 01:29:44.087688",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -82,6 +82,7 @@
   {
    "fieldname": "latest_percent_done_reported",
    "fieldtype": "Percent",
+   "in_list_view": 1,
    "label": "Complete Reported"
   },
   {
@@ -95,7 +96,6 @@
    "columns": 2,
    "fieldname": "feature_brief",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Feature Brief",
    "length": 14,
    "reqd": 1,
@@ -104,6 +104,7 @@
   {
    "fieldname": "feature_title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Feature Title"
   },
   {
@@ -126,7 +127,6 @@
    "columns": 1,
    "fieldname": "t_shirt_size",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "T shirt Size",
    "options": "Xtra-large\nLarge\nMedium\nSmall\nMicro",
    "reqd": 1
@@ -262,6 +262,8 @@
    "fetch_from": "initiative_key.initiative_title",
    "fieldname": "initiative_title",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Initiative Title",
    "read_only": 1
   },
@@ -285,7 +287,7 @@
    "label": "Color"
   }
  ],
- "modified": "2020-12-05 05:05:03.184815",
+ "modified": "2020-12-05 07:20:13.292470",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",
