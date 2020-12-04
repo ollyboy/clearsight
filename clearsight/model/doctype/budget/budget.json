@@ -1,39 +1,29 @@
 {
- "autoname": "format:{period}:{title}-{gl_code}",
+ "autoname": "format:{period_key}:{budget_title}-{gl_code}",
  "creation": "2020-06-14 06:27:02.512191",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "period",
+  "period_key",
   "gl_code",
-  "title",
+  "budget_brief",
+  "budget_title",
   "owner_contact",
-  "status",
+  "budget_status",
   "c001",
   "capex",
   "opex",
-  "other",
-  "other_type",
   "s001",
   "budget_consumption",
-  "initiative_capex_tot",
-  "initiative_opex_tot",
-  "initiative_other_tot",
-  "theme_capex_tot",
-  "theme_opex_tot",
-  "theme_other_tot"
+  "forcast_capex_used",
+  "plan_capex_used",
+  "actaul_capex_used",
+  "forcast_opex_used",
+  "plan_opex_used",
+  "actual_opex_used"
  ],
  "fields": [
-  {
-   "fieldname": "period",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Period",
-   "options": "Period",
-   "reqd": 1,
-   "set_only_once": 1
-  },
   {
    "default": "Not Defined",
    "fieldname": "gl_code",
@@ -44,45 +34,16 @@
    "set_only_once": 1
   },
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
-   "default": "Approved-Baseline",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "WIP\nProposed\nApproved-Baseline\nApproved-Revision\nSuspended\nCanceled\nConsumed",
-   "reqd": 1
-  },
-  {
    "default": "0",
    "fieldname": "capex",
    "fieldtype": "Currency",
-   "label": "CAPEX"
+   "label": "Budget CapEx"
   },
   {
    "default": "0",
    "fieldname": "opex",
    "fieldtype": "Currency",
-   "label": "OPEX"
-  },
-  {
-   "default": "0",
-   "fieldname": "other",
-   "fieldtype": "Currency",
-   "label": "OTHER"
-  },
-  {
-   "fieldname": "other_type",
-   "fieldtype": "Select",
-   "label": "Other Type",
-   "options": "one-off\nhire\nopex/capex tba"
+   "label": "Budget OpEx"
   },
   {
    "fieldname": "c001",
@@ -101,43 +62,74 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "initiative_capex_tot",
-   "fieldtype": "Data",
-   "label": "Initiative CapEx Total"
-  },
-  {
-   "fieldname": "initiative_opex_tot",
-   "fieldtype": "Data",
-   "label": "Initiative OpEx Total"
-  },
-  {
-   "fieldname": "initiative_other_tot",
-   "fieldtype": "Data",
-   "label": "Initiative Other Total"
-  },
-  {
-   "fieldname": "theme_capex_tot",
-   "fieldtype": "Data",
-   "label": "Theme CapEx Total"
-  },
-  {
-   "fieldname": "theme_opex_tot",
-   "fieldtype": "Data",
-   "label": "Theme OpEx Total"
-  },
-  {
-   "fieldname": "theme_other_tot",
-   "fieldtype": "Data",
-   "label": "Theme Other Total"
-  },
-  {
    "fieldname": "owner_contact",
    "fieldtype": "Link",
    "label": "Owner Contact",
    "options": "User"
+  },
+  {
+   "fieldname": "period_key",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "Period or Planning Horizon",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "budget_title",
+   "fieldtype": "Data",
+   "label": "Budget Detail / Full Name"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "budget_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "forcast_capex_used",
+   "fieldtype": "Currency",
+   "label": "Forcast CapEx Used"
+  },
+  {
+   "fieldname": "plan_capex_used",
+   "fieldtype": "Currency",
+   "label": "Plan CapEx Used"
+  },
+  {
+   "fieldname": "actaul_capex_used",
+   "fieldtype": "Currency",
+   "label": "Actaul CapEx Used"
+  },
+  {
+   "fieldname": "forcast_opex_used",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx Used"
+  },
+  {
+   "fieldname": "plan_opex_used",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx Used"
+  },
+  {
+   "fieldname": "actual_opex_used",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Used"
+  },
+  {
+   "fieldname": "budget_brief",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brief / Short Title",
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
- "modified": "2020-11-17 14:48:47.622699",
+ "modified": "2020-12-05 02:34:19.909699",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Budget",

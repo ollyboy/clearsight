@@ -1,5 +1,5 @@
 {
- "autoname": "format:{intent_key}-{goal_brief}",
+ "autoname": "format:{intent_key}:{goal_brief}",
  "creation": "2020-11-08 08:30:55.445261",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,30 +9,21 @@
   "intent_key",
   "goal_title",
   "goal_story",
+  "goal_status",
   "column_break_5",
   "goal_kra",
   "goal_start_date",
-  "goal_instigate_months",
+  "goal_end_date",
   "goal_forcast_investment",
   "npv_hurdle_percentage",
   "intangible",
   "t001",
   "section_break_11",
-  "benefit_start_date",
-  "benefit_duration_months",
-  "benefit_total_revenue",
-  "benefit_realisation_profile",
-  "column_break_16",
-  "target_quality",
-  "section_break_17",
+  "benefit_realisation",
+  "benefit_total_npv",
   "key_results"
  ],
  "fields": [
-  {
-   "fieldname": "target_quality",
-   "fieldtype": "Small Text",
-   "label": "Target Quality Notes"
-  },
   {
    "fieldname": "key_results",
    "fieldtype": "Table",
@@ -46,33 +37,6 @@
    "fieldtype": "HTML",
    "label": "t001",
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives are \"inspirational\" and have measurable Results required</li>\n<li>Each objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Keep the title short like a tag name ie \"New Sales\", \"Cust Loyalty\".</li>\n</ol>"
-  },
-  {
-   "fieldname": "benefit_duration_months",
-   "fieldtype": "Int",
-   "label": "Benefit Duration Months",
-   "reqd": 1
-  },
-  {
-   "fieldname": "benefit_start_date",
-   "fieldtype": "Date",
-   "label": "Benifit Start Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "benefit_total_revenue",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Benefit Total Revenue",
-   "precision": "0",
-   "reqd": 1
-  },
-  {
-   "fieldname": "benefit_realisation_profile",
-   "fieldtype": "Select",
-   "label": "Benefit Realisation Profile",
-   "options": "Flat\nStart 10% and build\nStart 90% and fall",
-   "reqd": 1
   },
   {
    "default": "0",
@@ -109,7 +73,7 @@
   {
    "fieldname": "goal_story",
    "fieldtype": "Small Text",
-   "label": "Description / Story"
+   "label": "Description / Story / Quality Notes"
   },
   {
    "fieldname": "goal_kra",
@@ -121,11 +85,6 @@
    "fieldname": "goal_start_date",
    "fieldtype": "Date",
    "label": "Goal Start Date"
-  },
-  {
-   "fieldname": "goal_instigate_months",
-   "fieldtype": "Int",
-   "label": "Goal Instigate Months"
   },
   {
    "fieldname": "goal_forcast_investment",
@@ -144,15 +103,34 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_17",
-   "fieldtype": "Section Break"
+   "default": "Active",
+   "fieldname": "goal_status",
+   "fieldtype": "Select",
+   "label": "Goal Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended"
   },
   {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
+   "fieldname": "benefit_realisation",
+   "fieldtype": "Table",
+   "label": "Benefit Realisation",
+   "options": "Benefit Realisation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "benefit_total_npv",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Benefit Total NPV",
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "goal_end_date",
+   "fieldtype": "Date",
+   "label": "Goal End Date"
   }
  ],
- "modified": "2020-12-03 08:51:27.785975",
+ "modified": "2020-12-05 04:32:07.427031",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",

@@ -61,7 +61,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Draft\nActive\nActive-Hidden\nClosed",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
    "reqd": 1
   },
   {
@@ -97,7 +97,7 @@
    "label": "Description / Story"
   }
  ],
- "modified": "2020-12-03 08:07:46.825649",
+ "modified": "2020-12-04 02:06:03.118477",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Strategic Intent",

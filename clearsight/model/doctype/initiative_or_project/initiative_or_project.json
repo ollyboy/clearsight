@@ -13,9 +13,13 @@
   "pm_contact",
   "sponser_contact",
   "initiative_status",
-  "t001",
+  "color",
   "cb001",
+  "initial_risk_estimate",
+  "target_activate_date",
+  "target_live_date",
   "initiative_story",
+  "t001",
   "section_break_10",
   "forcast_capex_fte",
   "forcast_capex_material",
@@ -41,9 +45,6 @@
   "actual_opex_material",
   "actual_opex_other",
   "section_break_36",
-  "initial_risk_estimate",
-  "target_activate_date",
-  "target_live_date",
   "s001",
   "planned_deliverable",
   "s002",
@@ -93,11 +94,11 @@
    "options": "User"
   },
   {
-   "default": "WIP",
+   "default": "Draft",
    "fieldname": "initiative_status",
    "fieldtype": "Select",
    "label": "Initiative Status",
-   "options": "Draft\nWIP\nProposed\nApproved-Baseline\nApproved-Revision\nSuspended\nCanceled\nConsumed",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
    "reqd": 1
   },
   {
@@ -197,12 +198,14 @@
   {
    "fieldname": "target_activate_date",
    "fieldtype": "Date",
-   "label": "Target Activate Date"
+   "label": "Target Activate Date",
+   "reqd": 1
   },
   {
    "fieldname": "target_live_date",
    "fieldtype": "Date",
-   "label": "Target Live Date"
+   "label": "Target Live Date",
+   "reqd": 1
   },
   {
    "fieldname": "s001",
@@ -313,9 +316,14 @@
   {
    "fieldname": "column_break_46",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "color"
   }
  ],
- "modified": "2020-12-03 05:28:12.036931",
+ "modified": "2020-12-05 04:53:22.107443",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

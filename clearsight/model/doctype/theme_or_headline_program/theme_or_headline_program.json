@@ -1,29 +1,22 @@
 {
- "autoname": "format:{period}:{short_title}",
+ "autoname": "format:{period_key}:{theme_brief}",
  "creation": "2020-11-12 06:29:40.078626",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "period",
-  "short_title",
-  "long_title",
-  "description",
+  "period_key",
+  "theme_brief",
+  "theme_title",
+  "theme_story",
+  "theme_status",
   "master_goals",
-  "business_case",
-  "portfolio"
+  "portfolio",
+  "color",
+  "company",
+  "version"
  ],
  "fields": [
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
-  {
-   "fieldname": "business_case",
-   "fieldtype": "Attach",
-   "label": "Business Case"
-  },
   {
    "fieldname": "master_goals",
    "fieldtype": "Table",
@@ -32,38 +25,67 @@
    "reqd": 1
   },
   {
-   "fieldname": "period",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Period",
-   "options": "Period",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
    "fieldname": "portfolio",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Portfolio"
   },
   {
-   "fieldname": "long_title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Long Title",
-   "reqd": 1
+   "fieldname": "period_key",
+   "fieldtype": "Link",
+   "label": "Period",
+   "options": "Period or Planning Horizon",
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
-   "fieldname": "short_title",
+   "fieldname": "theme_brief",
    "fieldtype": "Data",
-   "label": "Short Title / Tag",
+   "label": "Brief Title",
    "length": 8,
    "reqd": 1,
    "set_only_once": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "theme_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Title / Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theme_story",
+   "fieldtype": "Small Text",
+   "label": "Description / Story"
+  },
+  {
+   "default": "Active",
+   "fieldname": "theme_status",
+   "fieldtype": "Select",
+   "label": "Theme Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fetch_from": "period_key.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "company"
+  },
+  {
+   "fetch_from": "period_key.version",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "version"
   }
  ],
- "modified": "2020-11-17 08:34:49.084099",
+ "modified": "2020-12-05 04:45:11.774314",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Theme or Headline Program",

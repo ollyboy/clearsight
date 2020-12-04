@@ -4,19 +4,32 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "level",
-  "title",
-  "plan_opex",
-  "plan_capex",
-  "plan_other",
-  "actual_opex",
-  "actual_capex",
-  "actual_other"
+  "budget_level",
+  "source_title",
+  "forcast_capex_fte",
+  "forcast_capex_material",
+  "forcast_capex_other",
+  "plan_capex_fte",
+  "plan_capex_material",
+  "plan_capex_other",
+  "actual_capex_fte",
+  "actual_capex_material",
+  "actual_capex_other",
+  "forcast_opex_fte",
+  "forcast_opex_material",
+  "forcast_opex_other",
+  "plan_opex_fte",
+  "plan_opex_material",
+  "plan_opex_other",
+  "actual_opex_fte",
+  "actual_opex_material",
+  "actual_opex_other",
+  "budget_used_status"
  ],
  "fields": [
   {
    "columns": 1,
-   "fieldname": "level",
+   "fieldname": "budget_level",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Level",
@@ -24,56 +37,121 @@
   },
   {
    "columns": 1,
-   "fieldname": "title",
+   "fieldname": "source_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title"
+   "label": "Source Title"
+  },
+  {
+   "fieldname": "forcast_capex_fte",
+   "fieldtype": "Data",
+   "label": "Forcast CapEx FTE"
+  },
+  {
+   "fieldname": "forcast_capex_material",
+   "fieldtype": "Data",
+   "label": "Forcast CapEx Material"
+  },
+  {
+   "fieldname": "forcast_capex_other",
+   "fieldtype": "Data",
+   "label": "Forcast CapEx Other"
   },
   {
    "columns": 1,
-   "fieldname": "plan_opex",
+   "fieldname": "plan_capex_fte",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Plan OpEx"
+   "label": "Plan CapEx FTE"
   },
   {
    "columns": 1,
-   "fieldname": "plan_capex",
+   "fieldname": "plan_capex_material",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Plan CapEx"
+   "label": "Plan CapEx Material"
   },
   {
    "columns": 1,
-   "fieldname": "plan_other",
+   "fieldname": "plan_capex_other",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Plan Other"
+   "label": "Plan CapEx Other"
   },
   {
    "columns": 1,
-   "fieldname": "actual_opex",
+   "fieldname": "actual_capex_fte",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Actual OpEx"
+   "label": "Actual CapEx FTE"
   },
   {
    "columns": 1,
-   "fieldname": "actual_capex",
+   "fieldname": "actual_capex_material",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Actual CapEx"
+   "label": "Actual CapEx Material"
   },
   {
    "columns": 1,
-   "fieldname": "actual_other",
+   "fieldname": "actual_capex_other",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Actual Other"
+   "label": "Actual CapEx Other"
+  },
+  {
+   "fieldname": "forcast_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx FTE"
+  },
+  {
+   "fieldname": "forcast_opex_material",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx Material"
+  },
+  {
+   "fieldname": "forcast_opex_other",
+   "fieldtype": "Currency",
+   "label": "Forcast OpEx Other"
+  },
+  {
+   "fieldname": "plan_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx FTE"
+  },
+  {
+   "fieldname": "plan_opex_material",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx Material"
+  },
+  {
+   "fieldname": "plan_opex_other",
+   "fieldtype": "Currency",
+   "label": "Plan OpEx Other"
+  },
+  {
+   "fieldname": "actual_opex_fte",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx FTE"
+  },
+  {
+   "fieldname": "actual_opex_material",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Material"
+  },
+  {
+   "fieldname": "actual_opex_other",
+   "fieldtype": "Currency",
+   "label": "Actual OpEx Other"
+  },
+  {
+   "fieldname": "budget_used_status",
+   "fieldtype": "Data",
+   "label": "Budget Used Status"
   }
  ],
  "istable": 1,
- "modified": "2020-11-15 07:42:02.838828",
+ "modified": "2020-12-05 02:44:03.146851",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Budget Consumption",

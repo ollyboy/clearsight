@@ -41,7 +41,8 @@
   "latest_percent_done_reported",
   "planned_resource",
   "company",
-  "version"
+  "version",
+  "color"
  ],
  "fields": [
   {
@@ -137,7 +138,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Feature Status",
-   "options": "Draft\nProposed\nActive\nHidden\nSuspended\nCanceled\nComplete",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nSuspended\nCanceled\nComplete",
    "reqd": 1
   },
   {
@@ -277,9 +278,14 @@
    "fieldtype": "Data",
    "label": "Version",
    "read_only": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
   }
  ],
- "modified": "2020-12-03 05:13:59.026922",
+ "modified": "2020-12-05 02:18:01.875460",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",
