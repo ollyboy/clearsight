@@ -60,7 +60,7 @@ def get_data():
             ]
 		},
             {
-            "label": _("Portfolio"),
+            "label": _("Planning"),
             "icon": "fa fa-star",
             "items": [
                 {
@@ -84,6 +84,12 @@ def get_data():
                                 {
                     "type": "doctype",
                     "name": "Capability",
+                    "description": _(""),
+                    "onboard": 1,
+                },
+                                {
+                    "type": "doctype",
+                    "name": "Portfolio",
                     "description": _(""),
                     "onboard": 1,
                 }

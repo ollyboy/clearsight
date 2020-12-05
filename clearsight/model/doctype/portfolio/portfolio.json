@@ -1,12 +1,13 @@
 {
  "autoname": "format:{period_key}-{kra_type}",
- "creation": "2020-11-15 03:35:47.746264",
+ "creation": "2020-12-06 06:31:27.063655",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "period_key",
-  "kra_type"
+  "portfolio_brief",
+  "portfolio_story"
  ],
  "fields": [
   {
@@ -17,17 +18,21 @@
    "set_only_once": 1
   },
   {
-   "fieldname": "kra_type",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "Operational efficiency\nProduction stability\nGrowth\nCustomer intimacy\nDifferentiation\nLaw compliance\nSustainable practice",
+   "fieldname": "portfolio_brief",
+   "fieldtype": "Data",
+   "label": "Portfolio Brief",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "portfolio_story",
+   "fieldtype": "Small Text",
+   "label": "Portfolio Story"
   }
  ],
- "modified": "2020-12-06 06:21:34.170927",
+ "modified": "2020-12-06 06:32:06.036950",
  "modified_by": "Administrator",
  "module": "Model",
- "name": "Key Result Area",
+ "name": "Portfolio",
  "owner": "Administrator",
  "permissions": [
   {
