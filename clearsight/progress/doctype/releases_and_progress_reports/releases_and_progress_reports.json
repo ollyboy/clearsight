@@ -5,29 +5,23 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "feature",
-  "type",
+  "feature_key",
+  "release_type",
   "effective_date",
-  "description",
-  "status",
+  "release_story",
+  "release_status",
   "actual_capex_fte",
-  "actual_capex_expense",
-  "actual_opex",
-  "actual_other_cost",
+  "actual_capex_material",
+  "actual_capex_other",
+  "actual_opex_fte",
+  "actual_opex_material",
+  "actual_opex_other",
   "latest_risk_reported",
   "latest_live_date_reported",
   "latest_percent_done_reported",
   "t001"
  ],
  "fields": [
-  {
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Type",
-   "options": "Product Release\nProgress Report",
-   "reqd": 1
-  },
   {
    "fieldname": "effective_date",
    "fieldtype": "Date",
@@ -36,45 +30,9 @@
    "reqd": 1
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description / Summary"
-  },
-  {
-   "fieldname": "feature",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Feature or Program Increment",
-   "options": "Feature or Program Increment",
-   "reqd": 1
-  },
-  {
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "label": "Status",
-   "options": "Draft\nProposed\nActive\nSuspended\nCanceled",
-   "reqd": 1
-  },
-  {
    "fieldname": "actual_capex_fte",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Actual CapEx FTE"
-  },
-  {
-   "fieldname": "actual_capex_expense",
-   "fieldtype": "Data",
-   "label": "Actual CapEx Expense"
-  },
-  {
-   "fieldname": "actual_opex",
-   "fieldtype": "Data",
-   "label": "Actual OpEx"
-  },
-  {
-   "fieldname": "actual_other_cost",
-   "fieldtype": "Data",
-   "label": "Actual Other Cost"
   },
   {
    "fieldname": "latest_risk_reported",
@@ -95,9 +53,63 @@
    "fieldname": "t001",
    "fieldtype": "Data",
    "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Actuals should be for this period only</li>\n</ol>"
+  },
+  {
+   "fieldname": "feature_key",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Feature or Program Increment",
+   "options": "Feature or Program Increment or Phase",
+   "reqd": 1
+  },
+  {
+   "fieldname": "release_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Product Release\nProgress Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "release_story",
+   "fieldtype": "Small Text",
+   "label": "Description / Summary"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "release_status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nSuspended\nCanceled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_capex_material",
+   "fieldtype": "Data",
+   "label": "Actual CapEx Material"
+  },
+  {
+   "fieldname": "actual_capex_other",
+   "fieldtype": "Data",
+   "label": "Actual CapEx Other"
+  },
+  {
+   "fieldname": "actual_opex_fte",
+   "fieldtype": "Data",
+   "label": "Actual OpEx FTE"
+  },
+  {
+   "fieldname": "actual_opex_material",
+   "fieldtype": "Data",
+   "label": "Actual OpEx Material"
+  },
+  {
+   "fieldname": "actual_opex_other",
+   "fieldtype": "Data",
+   "label": "Actual OpEx Other"
   }
  ],
- "modified": "2020-11-18 09:29:28.814763",
+ "modified": "2020-12-06 09:13:04.945357",
  "modified_by": "Administrator",
  "module": "Progress",
  "name": "Releases and Progress reports",

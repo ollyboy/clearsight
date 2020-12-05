@@ -5,41 +5,22 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "period",
-  "title",
-  "type",
+  "period_key",
+  "risk_title",
+  "risk_type",
   "release",
   "goal",
   "theme",
   "initiative",
   "feature",
-  "description",
+  "risk_story",
   "likelihood",
   "reputation_impact",
   "benifits_impact",
   "resolve_by_date",
-  "status"
+  "risk_status"
  ],
  "fields": [
-  {
-   "fieldname": "period",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Period",
-   "options": "Period",
-   "reqd": 1
-  },
-  {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title",
-   "reqd": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
   {
    "fieldname": "likelihood",
    "fieldtype": "Percent",
@@ -61,50 +42,69 @@
    "label": "Resolve by Date"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "label": "Status",
-   "options": "Draft\nActive\nActive Escalated\nClosed Resolved\nClosed No Action\n"
-  },
-  {
    "fieldname": "release",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Releases and Progress report",
    "options": "Releases and Progress reports"
   },
   {
    "fieldname": "goal",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Goal or Objective",
    "options": "Goal or Objective"
   },
   {
    "fieldname": "theme",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Theme or Headline Program",
    "options": "Theme or Headline Program"
   },
   {
    "fieldname": "initiative",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Initiative or Project",
    "options": "Initiative or Project"
   },
   {
    "fieldname": "feature",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Feature or Program Increment",
-   "options": "Feature or Program Increment"
+   "options": "Feature or Program Increment or Phase"
   },
   {
-   "fieldname": "type",
+   "fieldname": "period_key",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Period",
+   "options": "Period",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_title",
    "fieldtype": "Data",
-   "label": "type",
+   "label": "Risk Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_type",
+   "fieldtype": "Data",
+   "label": "Risk Type",
    "options": "Major\nMinor\nIssue",
    "reqd": 1
+  },
+  {
+   "fieldname": "risk_story",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "risk_status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "options": "Draft\nActive\nActive Escalated\nClosed Resolved\nClosed No Action\n"
   }
  ],
- "modified": "2020-11-18 13:06:05.074911",
+ "modified": "2020-12-06 09:20:48.759192",
  "modified_by": "Administrator",
  "module": "Progress",
  "name": "Risk",
@@ -123,7 +123,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

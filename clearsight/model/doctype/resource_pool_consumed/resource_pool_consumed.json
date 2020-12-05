@@ -1,0 +1,52 @@
+{
+ "autoname": "format:{ resource_type}-{consumed_by}-{####}",
+ "creation": "2020-12-06 08:27:03.588929",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource_type",
+  "consumed_by",
+  "from_date",
+  "to_date",
+  "fte_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource_type",
+   "fieldtype": "Data",
+   "label": " Resource Type"
+  },
+  {
+   "fieldname": "consumed_by",
+   "fieldtype": "Data",
+   "label": "consumed by"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "from date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "to date"
+  },
+  {
+   "fieldname": "fte_quantity",
+   "fieldtype": "Int",
+   "label": "FTE quantity"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-06 08:28:41.298834",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Resource Pool Consumed",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

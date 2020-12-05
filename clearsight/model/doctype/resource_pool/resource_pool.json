@@ -1,15 +1,16 @@
 {
- "autoname": "format:{type}-{share}",
+ "autoname": "format:{resource_type_key}-{company_key}-{####}",
  "creation": "2020-11-16 04:06:29.052548",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type",
-  "share",
+  "resource_type_key",
+  "company_key",
   "avaiable_from_date",
   "available_to_date",
-  "fte_quanity"
+  "fte_quanity",
+  "consumed"
  ],
  "fields": [
   {
@@ -30,7 +31,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "type",
+   "fieldname": "resource_type_key",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Resource Type",
@@ -39,14 +40,20 @@
    "set_only_once": 1
   },
   {
-   "fieldname": "share",
+   "fieldname": "company_key",
    "fieldtype": "Link",
    "label": "Group or Subsidiary",
    "options": "Company Structure",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "consumed",
+   "fieldtype": "Table",
+   "label": "consumed",
+   "options": "Resource Pool Consumed"
   }
  ],
- "modified": "2020-11-16 06:42:38.600689",
+ "modified": "2020-12-06 09:04:21.054340",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Resource Pool",
