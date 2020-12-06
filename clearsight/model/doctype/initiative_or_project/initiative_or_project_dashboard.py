@@ -5,7 +5,7 @@ def get_data():
 	return {
 		'heatmap': False,
 		'heatmap_message': _(''),
-		'fieldname': 'initiative_title',
+		'fieldname': 'initiative_key',
 		'transactions': [
 			{
 				'label': _('Details'),
