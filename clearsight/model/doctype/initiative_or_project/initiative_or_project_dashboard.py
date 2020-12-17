@@ -8,7 +8,7 @@ def get_data():
 		'fieldname': 'initiative_key',
 		'transactions': [
 			{
-				'label': _('Details'),
+				#'label': _('Details'),
 				'items': ['Feature or Program Increment or Phase']
 			}
 		]

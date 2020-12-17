@@ -135,60 +135,71 @@
    "default": "0",
    "fieldname": "planned_capex_fte",
    "fieldtype": "Currency",
-   "label": "Planned CapEx FTE"
+   "label": "Planned CapEx FTE",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "planned_capex_material",
    "fieldtype": "Currency",
-   "label": "Planned CapEx Material"
+   "label": "Planned CapEx Material",
+   "read_only": 1
   },
   {
    "fieldname": "planned_capex_other",
    "fieldtype": "Currency",
-   "label": "Planned CapEx Other"
+   "label": "Planned CapEx Other",
+   "read_only": 1
   },
   {
    "fieldname": "actual_capex_fte",
    "fieldtype": "Currency",
-   "label": "Actual CapEx FTE"
+   "label": "Actual CapEx FTE",
+   "read_only": 1
   },
   {
    "fieldname": "actual_capex_material",
    "fieldtype": "Currency",
-   "label": "Actual CapEx Material"
+   "label": "Actual CapEx Material",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "planned_opex_fte",
    "fieldtype": "Currency",
-   "label": "Planned OpEx FTE"
+   "label": "Planned OpEx FTE",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "planned_opex_material",
    "fieldtype": "Currency",
-   "label": "Planned OpEx Material"
+   "label": "Planned OpEx Material",
+   "read_only": 1
   },
   {
    "fieldname": "planned_opex_other",
    "fieldtype": "Currency",
-   "label": "Planned OpEx Other"
+   "label": "Planned OpEx Other",
+   "read_only": 1
   },
   {
    "fieldname": "actual_opex_fte",
    "fieldtype": "Currency",
-   "label": "Actual OpEx FTE"
+   "label": "Actual OpEx FTE",
+   "read_only": 1
   },
   {
    "fieldname": "actual_opex_material",
    "fieldtype": "Currency",
-   "label": " Actual OpEx Material"
+   "label": " Actual OpEx Material",
+   "read_only": 1
   },
   {
    "fieldname": "actual_opex_other",
    "fieldtype": "Currency",
-   "label": "Actual OpEx Other"
+   "label": "Actual OpEx Other",
+   "read_only": 1
   },
   {
    "fieldname": "initial_risk_estimate",
@@ -296,7 +307,8 @@
   {
    "fieldname": "actual_capex_other",
    "fieldtype": "Currency",
-   "label": "Actual CapEx Other"
+   "label": "Actual CapEx Other",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_22",
@@ -326,12 +338,14 @@
   {
    "fieldname": "initiative_brief",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Brief Title / Nick Name",
    "length": 10,
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
- "modified": "2020-12-05 08:17:08.504515",
+ "modified": "2020-12-07 08:52:27.345162",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

@@ -89,6 +89,7 @@
   {
    "fieldname": "initiative_key",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Initiative Key",
    "options": "Initiative or Project",
    "reqd": 1,
@@ -113,7 +114,6 @@
    "columns": 1,
    "fieldname": "feature_start_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Feature Start Date",
    "reqd": 1
   },
@@ -121,7 +121,6 @@
    "columns": 1,
    "fieldname": "feature_end_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Feature End Date",
    "reqd": 1
   },
@@ -296,7 +295,7 @@
    "read_only": 1
   }
  ],
- "modified": "2020-12-05 08:25:12.608315",
+ "modified": "2020-12-07 04:00:54.736056",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",
