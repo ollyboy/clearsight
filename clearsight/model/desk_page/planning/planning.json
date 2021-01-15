@@ -12,7 +12,7 @@
  "idx": 0,
  "is_standard": 1,
  "label": "Planning",
- "modified": "2021-01-15 09:03:00.893386",
+ "modified": "2021-01-16 04:21:24.897454",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planning",
@@ -22,8 +22,32 @@
  "shortcuts": [
   {
    "doc_view": "List",
-   "label": "Theme or Headline Program",
+   "label": "Theme or Program",
    "link_to": "Theme or Headline Program",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Initiative or Project",
+   "link_to": "Initiative or Project",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Feature, PI or Phase",
+   "link_to": "Feature or Program Increment or Phase",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Capability",
+   "link_to": "Capability",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Portfolio",
+   "link_to": "Portfolio",
    "type": "DocType"
   }
  ],
