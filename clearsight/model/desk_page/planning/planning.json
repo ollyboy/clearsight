@@ -12,13 +12,13 @@
  "idx": 0,
  "is_standard": 1,
  "label": "Planning",
- "modified": "2021-01-16 04:21:24.897454",
+ "modified": "2021-01-16 05:26:16.357624",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Planning",
  "owner": "Administrator",
  "pin_to_bottom": 0,
- "pin_to_top": 1,
+ "pin_to_top": 0,
  "shortcuts": [
   {
    "doc_view": "List",
