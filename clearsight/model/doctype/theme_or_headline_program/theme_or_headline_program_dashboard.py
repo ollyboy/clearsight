@@ -5,7 +5,7 @@ def get_data():
 	return {
 		'heatmap':False,
 		'heatmap_message': _('Heatmap message'),
-		'fieldname': 'theme',
+		'fieldname': 'theme_brief',
 		'transactions': [
 			{
 				'label': _('Project'),

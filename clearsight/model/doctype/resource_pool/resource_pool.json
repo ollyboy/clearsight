@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "format:{resource_type_key}-{company_key}-{####}",
  "creation": "2020-11-16 04:06:29.052548",
  "doctype": "DocType",
@@ -53,7 +54,9 @@
    "options": "Resource Pool Consumed"
   }
  ],
- "modified": "2020-12-06 09:04:21.054340",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-01-17 09:27:59.459196",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Resource Pool",
@@ -72,7 +75,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

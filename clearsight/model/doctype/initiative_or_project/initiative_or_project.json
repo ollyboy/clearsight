@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "format:{theme_key}-{initiative_brief}",
  "creation": "2020-11-12 06:56:31.543354",
  "doctype": "DocType",
@@ -8,6 +9,7 @@
   "initiative_brief",
   "initiative_title",
   "theme_key",
+  "theme_brief",
   "company",
   "version",
   "top_line_budget",
@@ -343,9 +345,17 @@
    "length": 10,
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fetch_from": "theme_key.theme_brief",
+   "fieldname": "theme_brief",
+   "fieldtype": "Data",
+   "label": "Theme Brief",
+   "read_only": 1
   }
  ],
- "modified": "2020-12-07 08:52:27.345162",
+ "links": [],
+ "modified": "2021-01-16 08:53:38.653838",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",
