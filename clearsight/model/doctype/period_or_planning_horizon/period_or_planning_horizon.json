@@ -1,6 +1,7 @@
 {
+ "actions": [],
  "autoname": "format:{company}-{version}",
- "creation": "2020-11-27 01:52:22.843094",
+ "creation": "2022-02-11 09:00:11.528575",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -8,9 +9,10 @@
   "company",
   "version",
   "period_title",
-  "period_start_date",
-  "period_end_date",
-  "period_status",
+  "start_date",
+  "end_date",
+  "status",
+  "column_break_12",
   "resource_health",
   "finance_health",
   "progress_health",
@@ -19,6 +21,7 @@
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "company",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -28,9 +31,10 @@
    "set_only_once": 1
   },
   {
+   "columns": 1,
    "fieldname": "version",
    "fieldtype": "Data",
-   "label": "Version",
+   "label": "Version / ID",
    "length": 8,
    "reqd": 1,
    "set_only_once": 1
@@ -68,9 +72,10 @@
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>Period unique \"talking key\" is [company short title - version]</li>\n<li>Use Versions like 21/23 for years 2021-2023 or \"core\", \"draft\" etc to define versions.</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character. Do not use \":\" or \"-\" characters in names or versions.</li>\n<li>Health ratings will be calculated from Portfolio/Project summaries</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Period defines the total strategic planning period, all projects must be within this range.</li>\n<li>The Period unique \"talking key\" is [company - version]</li>\n<li>Use Versions like 21/22 or 21/22 v2 for years 2021-2022</li>\n<li>Make Version as small as possible, Use only AlphaNumerics and \"/\" character. Do not use \":\" or \"-\" characters in names or versions.</li>\n<li>Period title can be used for a longer form name of the period and version</li>\n<li>Health ratings will be calculated from Portfolio/Project summaries</li>\n</ol>"
   },
   {
+   "columns": 1,
    "fieldname": "period_title",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -79,14 +84,20 @@
    "unique": 1
   },
   {
-   "fieldname": "period_start_date",
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Start Date",
    "reqd": 1
   },
   {
-   "fieldname": "period_end_date",
+   "columns": 1,
+   "fieldname": "end_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "End Date",
@@ -95,7 +106,7 @@
   {
    "allow_in_quick_entry": 1,
    "default": "Active",
-   "fieldname": "period_status",
+   "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
@@ -103,10 +114,12 @@
    "reqd": 1
   }
  ],
- "modified": "2020-12-05 04:37:11.990471",
+ "links": [],
+ "modified": "2022-02-24 14:15:05.919102",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Period or Planning Horizon",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -125,5 +138,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

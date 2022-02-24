@@ -1,0 +1,116 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Enterprise</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Period Or Planning Horizon\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Strategic Intent\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goal Or Objective\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Key Result Area\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px;\\\"><b>Portfolio</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Budget&gt;Theme&gt;Initiative. Portfolio&gt;Theme&gt;Initiative\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Topline Budget\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Portfolio Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Theme Or Headline Program\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Initiative Or Project\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Solutions / Programs</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Initiative/Project&gt;Feature/PI/Phase. Goal&gt;Capability. Capability&gt;Feature/PI/Phase\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Capability\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feature or PI or Phase\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Work / Setup</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Pool\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Type\",\"col\":3}}]",
+ "creation": "2022-02-15 09:21:41.671759",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "today",
+ "idx": 0,
+ "label": "Clearsight",
+ "links": [],
+ "modified": "2022-02-24 17:22:06.920824",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Clearsight",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Capability",
+   "link_to": "Capability",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Feature or PI or Phase",
+   "link_to": "Feature or Program Increment or Phase",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Topline Budget",
+   "link_to": "Budget",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Portfolio Summary",
+   "link_to": "Portfolio",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Companies",
+   "link_to": "Company Structure",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Resource Type",
+   "link_to": "Resource Type",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Strategic Intent",
+   "link_to": "Strategic Intent",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Initiative Or Project",
+   "link_to": "Initiative or Project",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Resource Pool",
+   "link_to": "Resource Pool",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Goal Or Objective",
+   "link_to": "Goal or Objective",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Period Or Planning Horizon",
+   "link_to": "Period or Planning Horizon",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Theme Or Headline Program",
+   "link_to": "Theme or Headline Program",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Key Result Area",
+   "link_to": "Key Result Area",
+   "type": "DocType"
+  }
+ ],
+ "title": "Clearsight"
+}

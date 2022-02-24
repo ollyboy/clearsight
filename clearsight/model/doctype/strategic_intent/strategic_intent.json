@@ -1,6 +1,7 @@
 {
+ "actions": [],
  "autoname": "format:{period_key} {intent_brief}",
- "creation": "2020-11-11 02:27:42.450315",
+ "creation": "2022-02-11 09:00:11.150350",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -10,7 +11,7 @@
   "intent_brief",
   "intent_title",
   "intent_story",
-  "intent_status",
+  "status",
   "intent_contact",
   "priority",
   "company",
@@ -56,32 +57,23 @@
    "set_only_once": 1
   },
   {
-   "default": "Active",
-   "fieldname": "intent_status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
-   "reqd": 1
-  },
-  {
    "fetch_from": "period_key.company",
    "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Company",
+   "label": "Company (info)",
    "read_only": 1
   },
   {
    "fetch_from": "period_key.version",
    "fieldname": "version",
    "fieldtype": "Data",
-   "label": "Version",
+   "label": "Version (info)",
    "read_only": 1
   },
   {
    "fieldname": "intent_brief",
    "fieldtype": "Data",
-   "label": "Short Title / Brief",
+   "label": "Short Title / Brief / ID",
    "length": 16,
    "reqd": 1
   },
@@ -95,12 +87,23 @@
    "fieldname": "intent_story",
    "fieldtype": "Small Text",
    "label": "Description / Story"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
+   "reqd": 1
   }
  ],
- "modified": "2020-12-04 02:06:03.118477",
+ "links": [],
+ "modified": "2022-02-24 16:56:48.429534",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Strategic Intent",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -119,5 +122,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

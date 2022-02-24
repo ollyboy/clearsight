@@ -1,6 +1,7 @@
 {
+ "actions": [],
  "autoname": "format:{initiative_key}:{feature_brief}",
- "creation": "2020-11-27 01:29:44.087688",
+ "creation": "2022-02-11 09:00:10.722701",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -8,18 +9,16 @@
   "initiative_key",
   "initiative_title",
   "initiative_brief",
-  "feature_brief",
-  "feature_title",
-  "feature_start_date",
-  "feature_end_date",
+  "type",
+  "start_date",
+  "end_date",
   "t_shirt_size",
-  "feature_status",
+  "points_estimate",
+  "status",
   "color",
   "column_break_8",
-  "classic_phase",
-  "feature_dependency",
+  "dependency",
   "parent_capability",
-  "feature_story",
   "t001",
   "section_break_12",
   "plan_capex_fte",
@@ -47,14 +46,6 @@
  ],
  "fields": [
   {
-   "columns": 1,
-   "default": "NA, Agile Project",
-   "fieldname": "classic_phase",
-   "fieldtype": "Select",
-   "label": "Classic Phase",
-   "options": "NA, Agile Project\nPlan\nSpec\nDesign\nBuild\nTest\nImplement\nFull-project-placeholder"
-  },
-  {
    "fieldname": "parent_capability",
    "fieldtype": "Link",
    "label": "Parent Capability",
@@ -64,7 +55,7 @@
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>A Feature/PI/Phase is a service that fulfills a stakeholder need. Each feature includes a benefit hypothesis and acceptance criteria, and is sized or split as necessary to be delivered by a single Agile Release Train (ART) in a Program Increment (PI).\n</li><li>A feature can also be a waterfall style deliverable phase.</li>\n<li>A feature always has a parent of Initative/Project.</li>\n<li>Capabilities are sized and split into multiple features to facilitate their implementation in a single PI.</li>\n<li>Program Increment is a large \u201cindependent\u201d body of work that is time bound</li>\n<li>Maps to a top line \"Epic\" in Jira ( Not Jira Align )</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>A Feature/PI/Phase is an initiative that fulfills a stakeholder need. Each includes a benefit hypothesis and acceptance criteria, and is sized or split as necessary to be delivered by a single Agile Release Train (ART) in a Program Increment (PI).\n</li><li>An Initiative can also be a waterfall style deliverable phase.</li>\n<li>Capabilities are sized and split into multiple features to facilitate their implementation in a single PI.</li>\n<li>Stories must attach to Initiatives. If Epics and Features are not the same stories will need to link to both</li>\n</ol>"
   },
   {
    "fieldname": "section_break_12",
@@ -96,56 +87,12 @@
    "set_only_once": 1
   },
   {
-   "columns": 2,
-   "fieldname": "feature_brief",
-   "fieldtype": "Data",
-   "label": "Feature Brief",
-   "length": 14,
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
-   "fieldname": "feature_title",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Feature Title"
-  },
-  {
-   "columns": 1,
-   "fieldname": "feature_start_date",
-   "fieldtype": "Date",
-   "label": "Feature Start Date",
-   "reqd": 1
-  },
-  {
-   "columns": 1,
-   "fieldname": "feature_end_date",
-   "fieldtype": "Date",
-   "label": "Feature End Date",
-   "reqd": 1
-  },
-  {
    "columns": 1,
    "fieldname": "t_shirt_size",
    "fieldtype": "Select",
    "label": "T shirt Size",
    "options": "Xtra-large\nLarge\nMedium\nSmall\nMicro",
    "reqd": 1
-  },
-  {
-   "columns": 1,
-   "default": "Proposed",
-   "fieldname": "feature_status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Feature Status",
-   "options": "Draft\nProposed\nActive\nActive-Hidden\nSuspended\nCanceled\nComplete",
-   "reqd": 1
-  },
-  {
-   "fieldname": "feature_story",
-   "fieldtype": "Small Text",
-   "label": "Feature Story"
   },
   {
    "default": "0",
@@ -228,12 +175,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "feature_dependency",
-   "fieldtype": "Link",
-   "label": "Feature Dependency",
-   "options": "Feature or Program Increment or Phase"
-  },
-  {
    "fieldname": "column_break_17",
    "fieldtype": "Column Break"
   },
@@ -265,21 +206,21 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Initiative Title",
+   "label": "Initiative Title (info)",
    "read_only": 1
   },
   {
    "fetch_from": "initiative_key.company",
    "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Company",
+   "label": "Company (info)",
    "read_only": 1
   },
   {
    "fetch_from": "initiative_key.version",
    "fieldname": "version",
    "fieldtype": "Data",
-   "label": "Version",
+   "label": "Version (info)",
    "read_only": 1
   },
   {
@@ -291,14 +232,61 @@
    "fetch_from": "initiative_key.initiative_brief",
    "fieldname": "initiative_brief",
    "fieldtype": "Data",
-   "label": "Initiative Brief",
+   "label": "Initiative Brief (info)",
    "read_only": 1
+  },
+  {
+   "fieldname": "points_estimate",
+   "fieldtype": "Data",
+   "label": "Points Estimate"
+  },
+  {
+   "columns": 2,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "length": 14,
+   "options": "Quarterly PI\nEpic\nFeature\nPhase - Dev\nPhase - Test",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "default": "Proposed",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nSuspended\nCanceled\nComplete",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dependency",
+   "fieldtype": "Link",
+   "label": "Dependency",
+   "options": "Feature or Program Increment or Phase"
   }
  ],
- "modified": "2020-12-07 04:00:54.736056",
+ "links": [],
+ "modified": "2022-02-24 13:48:18.061045",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Feature or Program Increment or Phase",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -317,5 +305,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

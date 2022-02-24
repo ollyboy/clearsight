@@ -1,6 +1,7 @@
 {
+ "actions": [],
  "autoname": "field:company_brief",
- "creation": "2020-06-06 03:35:46.471900",
+ "creation": "2022-02-11 09:00:11.708077",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -11,7 +12,7 @@
   "industry",
   "stock_code",
   "group",
-  "company_status",
+  "status",
   "t001",
   "cb001",
   "capex_fte",
@@ -114,7 +115,7 @@
   {
    "allow_in_quick_entry": 1,
    "default": "Active",
-   "fieldname": "company_status",
+   "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
@@ -122,10 +123,12 @@
    "reqd": 1
   }
  ],
- "modified": "2020-12-04 02:05:38.084349",
+ "links": [],
+ "modified": "2022-02-24 13:36:05.439947",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Company Structure",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -144,5 +147,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

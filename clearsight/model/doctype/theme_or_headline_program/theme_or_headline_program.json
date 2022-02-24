@@ -1,15 +1,16 @@
 {
+ "actions": [],
  "autoname": "format:{period_key}:{theme_brief}",
- "creation": "2020-11-12 06:29:40.078626",
+ "creation": "2022-02-11 09:00:10.088638",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "period_key",
+  "period",
   "theme_brief",
   "theme_title",
-  "theme_story",
-  "theme_status",
+  "description",
+  "status",
   "master_goals",
   "portfolio",
   "color",
@@ -31,17 +32,9 @@
    "label": "Portfolio"
   },
   {
-   "fieldname": "period_key",
-   "fieldtype": "Link",
-   "label": "Period",
-   "options": "Period or Planning Horizon",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
    "fieldname": "theme_brief",
    "fieldtype": "Data",
-   "label": "Brief Title",
+   "label": "Brief Title / Code / ID",
    "length": 8,
    "reqd": 1,
    "set_only_once": 1,
@@ -52,19 +45,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Title / Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "theme_story",
-   "fieldtype": "Small Text",
-   "label": "Description / Story"
-  },
-  {
-   "default": "Active",
-   "fieldname": "theme_status",
-   "fieldtype": "Select",
-   "label": "Theme Status",
-   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
    "reqd": 1
   },
   {
@@ -83,12 +63,35 @@
    "fieldname": "version",
    "fieldtype": "Data",
    "label": "version"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Link",
+   "label": "Period",
+   "options": "Period or Planning Horizon",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
- "modified": "2020-12-05 04:45:11.774314",
+ "links": [],
+ "modified": "2022-02-24 13:34:57.914887",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Theme or Headline Program",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -107,5 +110,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
