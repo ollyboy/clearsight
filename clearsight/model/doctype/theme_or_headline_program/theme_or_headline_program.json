@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:{period_key}:{theme_brief}",
+ "autoname": "format:{period}:{theme_brief}",
  "creation": "2022-02-11 09:00:10.088638",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -87,7 +87,7 @@
   }
  ],
  "links": [],
- "modified": "2022-02-24 13:34:57.914887",
+ "modified": "2022-02-28 11:55:30.032779",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Theme or Headline Program",

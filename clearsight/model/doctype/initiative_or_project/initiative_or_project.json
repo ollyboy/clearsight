@@ -1,7 +1,7 @@
 {
  "actions": [],
- "autoname": "format:{theme_key}-{initiative_brief}",
- "creation": "2020-11-12 06:56:31.543354",
+ "autoname": "format:{theme_key}:{initiative_brief}",
+ "creation": "2022-02-11 09:00:11.813118",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -355,10 +355,11 @@
   }
  ],
  "links": [],
- "modified": "2021-01-16 08:53:38.653838",
+ "modified": "2022-02-28 12:01:12.071677",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -376,5 +377,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

@@ -1,6 +1,7 @@
 {
+ "actions": [],
  "autoname": "format:{intent_key}:{goal_brief}",
- "creation": "2020-11-08 08:30:55.445261",
+ "creation": "2022-02-11 09:00:11.993178",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -77,9 +78,9 @@
   },
   {
    "fieldname": "goal_kra",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Key Result Area",
-   "options": "Key Result Area"
+   "options": "Profit and economic gain\nGrowth\nCustomer satisfaction\nCustomer intimacy\nDifferentiation\nLaw compliance\nSustainable practice\nEmployee happiness\nProduct quality\nProduction stability\nInnovation\nRisk management\nSafe working conditions\nContinuous Improvement\nResource efficiently\nOperational efficiency\nOrganizational Structure"
   },
   {
    "fieldname": "goal_start_date",
@@ -130,10 +131,12 @@
    "label": "Goal End Date"
   }
  ],
- "modified": "2020-12-05 04:32:07.427031",
+ "links": [],
+ "modified": "2022-02-25 10:24:50.609790",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -151,5 +154,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

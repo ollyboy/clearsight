@@ -10,10 +10,11 @@
   "period_key",
   "intent_brief",
   "intent_title",
-  "intent_story",
-  "status",
-  "intent_contact",
   "priority",
+  "intent_contact",
+  "status",
+  "column_break_5",
+  "description",
   "company",
   "version",
   "t000"
@@ -31,12 +32,12 @@
    "fieldname": "t000",
    "fieldtype": "HTML",
    "label": "t000",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives and Results required should link to a Strategic Objective.</li>\n<li>A placeholder of \"bau\" and/or \"mission\" is at minimum required.</li>\n<li>Strategic intent is a child of Period but is implemented as a master file linked to Period as many records will be keyed at this level and the associated Child level of Results required </li>\n<li>Keep the title short and brief ie \"sales growth\", \"expansion\" as Intent will propagate down into definitions for projects etc </li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Strategic intent is long-term goals that reflect the preferred future position of the firm, as articulated by its top management.</li>\n<li>Hierarchy of Strategic intent is: Vision&gt; Mission&gt;Purpose&gt;Goals&gt;Objectives</li>\n<li>Vision=Aspirational statement of the company future. Mission = How to make the Vision reality. Purpose = Reason for existence.</li>\n<li>Keep the title short and brief ie \"sales growth\", \"expansion\" as Intent will propagate down into definitions for projects etc </li>\n</ol>"
   },
   {
    "fieldname": "intent_contact",
    "fieldtype": "Link",
-   "label": "Intent Owner / Contact",
+   "label": "Owner / Contact",
    "options": "User"
   },
   {
@@ -44,7 +45,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Intent Type",
-   "options": "Vision\nMission\nValue\nBAU",
+   "options": "Vision\nMission\nPurpose\nPillar",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -60,33 +61,30 @@
    "fetch_from": "period_key.company",
    "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Company (info)",
+   "label": "Company (parent)",
    "read_only": 1
   },
   {
    "fetch_from": "period_key.version",
    "fieldname": "version",
    "fieldtype": "Data",
-   "label": "Version (info)",
+   "label": "Version (parent)",
    "read_only": 1
   },
   {
    "fieldname": "intent_brief",
    "fieldtype": "Data",
    "label": "Short Title / Brief / ID",
-   "length": 16,
-   "reqd": 1
+   "length": 8,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   },
   {
    "fieldname": "intent_title",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Title / Name"
-  },
-  {
-   "fieldname": "intent_story",
-   "fieldtype": "Small Text",
-   "label": "Description / Story"
   },
   {
    "default": "Active",
@@ -96,10 +94,19 @@
    "label": "Status",
    "options": "Draft\nProposed\nActive\nActive-Hidden\nClosed\nSuspended",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description / Detail"
   }
  ],
  "links": [],
- "modified": "2022-02-24 16:56:48.429534",
+ "modified": "2022-03-13 11:57:52.186915",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Strategic Intent",

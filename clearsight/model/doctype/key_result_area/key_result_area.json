@@ -1,33 +1,52 @@
 {
+ "actions": [],
  "autoname": "format:{period_key}-{kra_type}",
- "creation": "2020-11-15 03:35:47.746264",
+ "creation": "2022-02-11 09:00:10.337441",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "period_key",
-  "kra_type"
+  "kra_type",
+  "priority",
+  "html_4"
  ],
  "fields": [
   {
    "fieldname": "period_key",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Period",
    "options": "Period or Planning Horizon",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
    "fieldname": "kra_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Type",
-   "options": "Operational efficiency\nProduction stability\nGrowth\nCustomer intimacy\nDifferentiation\nLaw compliance\nSustainable practice",
+   "options": "Profit and economic gain\nGrowth\nCustomer satisfaction\nCustomer intimacy\nDifferentiation\nLaw compliance\nSustainable practice\nEmployee happiness\nProduct quality\nProduction stability\nInnovation\nRisk management\nSafe working conditions\nContinuous Improvement\nResource efficiently\nOperational efficiency\nOrganizational Structure",
+   "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Rating",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "html_4",
+   "fieldtype": "HTML",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Financials: These include basics like revenue, costs, net profits, and trends that affect all three.</li>\n<li>Customer Satisfaction: How often do your customers complain about your business or products? What is your product return rate? What are the results of your customer satisfaction surveys?</li>\n<li>Market Perception: How do customers and potential customers view your company or its products?</li> \n<li>Productivity: Is your business accomplishing its overall goals? Is it meeting the everyday requirements to keep the company moving forward and keep its customers satisfied?</li>\n</ol>"
   }
  ],
- "modified": "2020-12-06 06:21:34.170927",
+ "links": [],
+ "modified": "2022-02-25 10:06:11.216277",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Key Result Area",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -46,5 +65,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

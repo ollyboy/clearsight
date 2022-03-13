@@ -1,6 +1,7 @@
 {
- "autoname": "format:{period_key}-{kra_type}",
- "creation": "2020-12-06 06:31:27.063655",
+ "actions": [],
+ "autoname": "format:{period_key}-{portfolio_brief}",
+ "creation": "2022-02-11 09:00:10.413092",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -13,26 +14,32 @@
   {
    "fieldname": "period_key",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Period",
    "options": "Period or Planning Horizon",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
    "fieldname": "portfolio_brief",
    "fieldtype": "Data",
-   "label": "Portfolio Brief",
+   "in_list_view": 1,
+   "label": "Portfolio Brief / ID",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
    "fieldname": "portfolio_story",
    "fieldtype": "Small Text",
-   "label": "Portfolio Story"
+   "label": "Portfolio Description"
   }
  ],
- "modified": "2020-12-06 06:32:06.036950",
+ "links": [],
+ "modified": "2022-02-24 18:02:02.395575",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Portfolio",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -51,5 +58,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
