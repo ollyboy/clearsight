@@ -1,21 +1,22 @@
 {
+ "actions": [],
  "autoname": "format:{parent}{start_date}{end_date}",
- "creation": "2020-12-05 02:55:43.042810",
+ "creation": "2022-02-11 09:00:10.180978",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "start_date",
   "end_date",
-  "benefit"
+  "benefit",
+  "release"
  ],
  "fields": [
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Start Date",
-   "reqd": 1
+   "label": "Start Date"
   },
   {
    "fieldname": "end_date",
@@ -30,17 +31,28 @@
    "in_list_view": 1,
    "label": "Benefit",
    "reqd": 1
+  },
+  {
+   "fieldname": "release",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Release",
+   "options": "Linear\nOne Off\nCurve",
+   "reqd": 1
   }
  ],
  "istable": 1,
- "modified": "2020-12-05 04:34:20.351812",
+ "links": [],
+ "modified": "2022-03-22 13:22:11.603809",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Benefit Realisation",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

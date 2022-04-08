@@ -16,11 +16,12 @@
   "goal_start_date",
   "goal_end_date",
   "goal_forcast_investment",
-  "npv_hurdle_percentage",
+  "investment_profile",
   "intangible",
   "t001",
   "section_break_11",
   "benefit_realisation",
+  "npv_hurdle_percentage",
   "benefit_total_npv",
   "key_results"
  ],
@@ -37,7 +38,7 @@
    "fieldname": "t001",
    "fieldtype": "HTML",
    "label": "t001",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Objectives are \"inspirational\" and have measurable Results required</li>\n<li>Each objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Keep the title short like a tag name ie \"New Sales\", \"Cust Loyalty\".</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Each \"inspirational\" objective must have one measurable result and ideally at least three, this allows projects to be linked via Progress reports/Releases</li>\n<li>Each objective can be long term ( year ) or short term ( quarter/month ) but must be within the planning period.</li>\n<li>Metrics can be divided into milestones (the completion of a task or project by a certain date) and quantifiable performance measures (such as revenue and profit growth )</li>\n<li>NPV is calculated from benefit realisation</li>\n</ol>"
   },
   {
    "default": "0",
@@ -47,8 +48,8 @@
   },
   {
    "fieldname": "npv_hurdle_percentage",
-   "fieldtype": "Data",
-   "label": "NPV hurdle percentage"
+   "fieldtype": "Percent",
+   "label": "NPV hurdle % / Min return rate"
   },
   {
    "fieldname": "goal_brief",
@@ -122,17 +123,22 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Benefit Total NPV",
-   "precision": "0",
-   "reqd": 1
+   "precision": "0"
   },
   {
    "fieldname": "goal_end_date",
    "fieldtype": "Date",
    "label": "Goal End Date"
+  },
+  {
+   "fieldname": "investment_profile",
+   "fieldtype": "Select",
+   "label": "Investment Profile",
+   "options": "Curve\nLinear\nmonthly\nquarterly"
   }
  ],
  "links": [],
- "modified": "2022-02-25 10:24:50.609790",
+ "modified": "2022-04-07 13:16:50.458158",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Goal or Objective",

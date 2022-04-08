@@ -1,12 +1,13 @@
 {
+ "actions": [],
  "autoname": "format:{goal}-{title}",
- "creation": "2020-11-13 02:44:05.009583",
+ "creation": "2022-02-11 09:00:11.066998",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "title",
-  "goal",
+  "enablesallows_goal",
   "description",
   "dependent_capability",
   "t001"
@@ -17,14 +18,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Title",
-   "reqd": 1
-  },
-  {
-   "fieldname": "goal",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Goal or Objective",
-   "options": "Goal or Objective",
    "reqd": 1
   },
   {
@@ -43,12 +36,21 @@
    "fieldtype": "HTML",
    "label": "t001",
    "options": "Many capabilities may be needed enable a goal, Many PIs will need to be completed"
+  },
+  {
+   "fieldname": "enablesallows_goal",
+   "fieldtype": "Table MultiSelect",
+   "label": "Enables/Allows Goal",
+   "options": "Capability Allows",
+   "reqd": 1
   }
  ],
- "modified": "2020-11-17 02:50:24.255721",
+ "links": [],
+ "modified": "2022-04-07 14:59:04.776875",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Capability",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -67,5 +69,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
