@@ -1,0 +1,60 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Time Frames and Business Definitions</span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Periods define the time horizons for planning and the planning versions\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Period Or Planning Horizon\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Key Result Area\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Work / Setup</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Pool\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Type\",\"col\":3}}]",
+ "creation": "2022-04-08 11:29:30.947455",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "integration",
+ "idx": 0,
+ "label": "Clearsight Setup",
+ "links": [],
+ "modified": "2022-04-08 17:35:36.187475",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Clearsight Setup",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Companies",
+   "link_to": "Company Structure",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Resource Type",
+   "link_to": "Resource Type",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Resource Pool",
+   "link_to": "Resource Pool",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Period Or Planning Horizon",
+   "link_to": "Period or Planning Horizon",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Key Result Area",
+   "link_to": "Key Result Area",
+   "type": "DocType"
+  }
+ ],
+ "title": "Clearsight-Setup"
+}

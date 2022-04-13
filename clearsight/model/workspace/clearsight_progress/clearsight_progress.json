@@ -1,0 +1,32 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Clearsight Progress</span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Here we will enter PM reports\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Todo\",\"col\":3}}]",
+ "creation": "2022-04-08 17:24:48.050488",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 0,
+ "label": "Clearsight Progress",
+ "links": [],
+ "modified": "2022-04-08 17:34:48.746812",
+ "modified_by": "Administrator",
+ "module": "Model",
+ "name": "Clearsight Progress",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Todo",
+   "link_to": "ToDo",
+   "type": "DocType"
+  }
+ ],
+ "title": "Clearsight-Progress"
+}

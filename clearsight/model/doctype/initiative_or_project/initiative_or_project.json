@@ -57,7 +57,8 @@
   "column_break_46",
   "latest_risk_reported",
   "latest_live_date_reported",
-  "latest_percent_done_reported"
+  "latest_percent_done_reported",
+  "portfolio_override"
  ],
  "fields": [
   {
@@ -352,10 +353,16 @@
    "fieldtype": "Data",
    "label": "Theme Brief",
    "read_only": 1
+  },
+  {
+   "fieldname": "portfolio_override",
+   "fieldtype": "Link",
+   "label": "Portfolio Override",
+   "options": "Portfolio"
   }
  ],
  "links": [],
- "modified": "2022-02-28 12:01:12.071677",
+ "modified": "2022-04-08 10:22:19.650114",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

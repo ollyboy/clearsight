@@ -1,0 +1,29 @@
+{
+ "charts": [
+  {
+   "chart_name": "CT",
+   "label": "CT"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Testing</span>\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"CT\",\"col\":12}}]",
+ "creation": "2022-04-08 17:46:40.798915",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "both",
+ "idx": 0,
+ "label": "Testing",
+ "links": [],
+ "modified": "2022-04-12 13:38:35.634929",
+ "modified_by": "Administrator",
+ "module": "Progress",
+ "name": "Testing",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 32.0,
+ "shortcuts": [],
+ "title": "Testing"
+}

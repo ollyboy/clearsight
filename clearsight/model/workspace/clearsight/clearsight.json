@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Enterprise</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Strategy must come first. A goal is a way to measure what you want to achieve as an organization. Strategy is about choices, trade-offs, and defining what kind of unique value you are going to deliver to specific customers in our competitive landscape. Strategy is creating a powerful position within the marketplace.\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Period Or Planning Horizon\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Strategic Intent\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goal Or Objective\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Key Result Area\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px;\\\"><b>Portfolio</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Themes are labels that track high-level organizational goals. Initiatives have a structural design. They house epics, and the completion of those epics will lead to the completion of the initiative. Themes are an organizational tool that allows you to label initiatives to understand what work contributes to what organizational goals. Themes should inspire the creation of initiatives and epics, but should not have a rigid 1-to-1 relationship with them. A theme for a rocket ship company would be something like \\\"Safety First\\\".\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Budget&gt;Theme&gt;Initiative. Portfolio&gt;Theme&gt;Initiative\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Topline Budget\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Portfolio Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Theme Or Headline Program\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Initiative Or Project\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Solutions / Programs</b></span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Initiative/Project&gt;Feature/PI/Phase. Goal&gt;Capability. Capability&gt;Feature/PI/Phase\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Capability\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feature or PI or Phase\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Work / Setup</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Pool\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Type\",\"col\":3}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Everything...</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Period Or Planning Horizon\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Strategic Intent\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goal Or Objective\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Key Result Area\",\"col\":3}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Budget&gt;Theme&gt;Initiative. Portfolio&gt;Theme&gt;Initiative\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Topline Budget\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Portfolio Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Theme Or Headline Program\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Initiative Or Project\",\"col\":3}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Hierarchies: Initiative/Project&gt;Feature/PI/Phase. Goal&gt;Capability. Capability&gt;Feature/PI/Phase\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Capability\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feature or PI or Phase\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Companies\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Pool\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Resource Type\",\"col\":3}}]",
  "creation": "2022-02-15 09:21:41.671759",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -10,7 +10,7 @@
  "idx": 0,
  "label": "Clearsight",
  "links": [],
- "modified": "2022-04-07 13:53:43.480228",
+ "modified": "2022-04-12 13:45:51.849834",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Clearsight",
@@ -18,7 +18,7 @@
  "parent_page": "",
  "public": 1,
  "roles": [],
- "sequence_id": 3.0,
+ "sequence_id": 44.0,
  "shortcuts": [
   {
    "color": "Blue",
