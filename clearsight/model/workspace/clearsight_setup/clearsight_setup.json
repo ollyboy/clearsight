@@ -10,7 +10,7 @@
  "idx": 0,
  "label": "Clearsight Setup",
  "links": [],
- "modified": "2022-04-08 17:35:36.187475",
+ "modified": "2022-04-14 14:05:02.835102",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Clearsight Setup",
@@ -56,5 +56,5 @@
    "type": "DocType"
   }
  ],
- "title": "Clearsight-Setup"
+ "title": "Clearsight Setup"
 }
