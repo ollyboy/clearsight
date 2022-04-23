@@ -19,10 +19,17 @@
   "color",
   "cb001",
   "initial_risk_estimate",
-  "target_activate_date",
-  "target_live_date",
+  "target_start_date",
+  "planned_duration_weeks",
+  "portfolio_override",
+  "offset_weeks",
   "initiative_story",
   "t001",
+  "tab_break_12",
+  "actual_start_date",
+  "forecast_duration_weeks",
+  "forcast_live_date",
+  "planned_end_date",
   "section_break_10",
   "forcast_capex_fte",
   "forcast_capex_material",
@@ -57,8 +64,7 @@
   "column_break_46",
   "latest_risk_reported",
   "latest_live_date_reported",
-  "latest_percent_done_reported",
-  "portfolio_override"
+  "latest_percent_done_reported"
  ],
  "fields": [
   {
@@ -108,7 +114,7 @@
   {
    "fieldname": "t001",
    "fieldtype": "HTML",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Save the project before adding any Features/Phases/PI's</li>\n<li>Save the features/Phases/Pis before adding any resources</li>\n<li>Projects have no start or stop dates as these are defined by the features/PI's/Phases. At least one \"placeholder feature of project duration must be added for planning</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Projects must belong to a Theme/Program</li>\n<li>Projects...</li>\n<li>Data in other tabs is rolled up from FEPs ( Features/Epics/Phases)</li>\n</ol>"
   },
   {
    "fieldname": "cb001",
@@ -208,18 +214,7 @@
    "fieldname": "initial_risk_estimate",
    "fieldtype": "Select",
    "label": "Initial Risk Estimate",
-   "options": "Zero\nvery-low\nlow\nmedium\nhigh\nvery-high\nmoon-shot"
-  },
-  {
-   "fieldname": "target_activate_date",
-   "fieldtype": "Date",
-   "label": "Target Activate Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "target_live_date",
-   "fieldtype": "Date",
-   "label": "Target Live Date",
+   "options": "Zero\nvery-low\nlow\nmedium\nhigh\nvery-high\nmoon-shot",
    "reqd": 1
   },
   {
@@ -253,8 +248,9 @@
   },
   {
    "fieldname": "latest_risk_reported",
-   "fieldtype": "Data",
-   "label": "Latest Risk Reported"
+   "fieldtype": "Select",
+   "label": "Latest Risk Reported",
+   "options": "Zero\nvery-low\nlow\nmedium\nhigh\nvery-high\nmoon-shot"
   },
   {
    "fieldname": "latest_live_date_reported",
@@ -359,10 +355,52 @@
    "fieldtype": "Link",
    "label": "Portfolio Override",
    "options": "Portfolio"
+  },
+  {
+   "fieldname": "planned_duration_weeks",
+   "fieldtype": "Int",
+   "label": "Planned Duration Weeks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "offset_weeks",
+   "fieldtype": "Int",
+   "label": "Offset Weeks"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date"
+  },
+  {
+   "fieldname": "forecast_duration_weeks",
+   "fieldtype": "Int",
+   "label": "Forecast Duration Weeks"
+  },
+  {
+   "fieldname": "target_start_date",
+   "fieldtype": "Date",
+   "label": "Target Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "forcast_live_date",
+   "fieldtype": "Date",
+   "label": "Forecast Live Date "
+  },
+  {
+   "fieldname": "tab_break_12",
+   "fieldtype": "Tab Break",
+   "label": "Epic/Phase Sum"
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "label": "Planned End Date"
   }
  ],
  "links": [],
- "modified": "2022-04-08 10:22:19.650114",
+ "modified": "2022-04-21 13:03:06.171125",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",

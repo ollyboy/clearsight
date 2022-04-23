@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Clearsight Progress</span>\",\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Here we will enter PM reports\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Todo\",\"col\":3}}]",
- "creation": "2022-04-08 17:24:48.050488",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Clearsight Progress</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Risk\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PM Report\",\"col\":3}}]",
+ "creation": "2022-04-16 18:13:35.388370",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -10,7 +10,7 @@
  "idx": 0,
  "label": "Clearsight Progress",
  "links": [],
- "modified": "2022-04-08 17:34:48.746812",
+ "modified": "2022-04-16 18:24:32.919474",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Clearsight Progress",
@@ -18,15 +18,22 @@
  "parent_page": "",
  "public": 1,
  "roles": [],
- "sequence_id": 30.0,
+ "sequence_id": 3.0,
  "shortcuts": [
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Todo",
-   "link_to": "ToDo",
+   "label": "PM Report",
+   "link_to": "Releases and Progress reports",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Risk",
+   "link_to": "Risk",
    "type": "DocType"
   }
  ],
- "title": "Clearsight-Progress"
+ "title": "Clearsight Progress"
 }
