@@ -6,12 +6,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "theme_key",
   "initiative_brief",
   "initiative_title",
-  "theme_key",
-  "theme_brief",
-  "company",
-  "version",
   "top_line_budget",
   "pm_contact",
   "sponser_contact",
@@ -25,6 +22,7 @@
   "offset_weeks",
   "planned_end_date",
   "initiative_story",
+  "section_break_20",
   "t001",
   "tab_break_12",
   "actual_start_date",
@@ -54,8 +52,10 @@
   "actual_opex_fte",
   "actual_opex_material",
   "actual_opex_other",
+  "section_break_50",
+  "html_49",
   "section_break_36",
-  "s001",
+  "deliverables_tab",
   "planned_deliverable",
   "s002",
   "latest_risk_calc",
@@ -64,14 +64,16 @@
   "column_break_46",
   "latest_risk_reported",
   "latest_live_date_reported",
-  "latest_percent_done_reported"
+  "latest_percent_done_reported",
+  "theme_brief",
+  "parent_company"
  ],
  "fields": [
   {
    "fieldname": "initiative_title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Initiative Title",
+   "label": "Full Initiative / Project Title",
    "length": 36,
    "reqd": 1,
    "set_only_once": 1
@@ -114,7 +116,7 @@
   {
    "fieldname": "t001",
    "fieldtype": "HTML",
-   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Projects must belong to a Theme/Program</li>\n<li>Projects...</li>\n<li>Data in other tabs is rolled up from FEPs ( Features/Epics/Phases)</li>\n</ol>"
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Projects must belong to a Theme/Program</li>\n<li>Planned end date is calculated from start + duration. To set a duration, first key it to zero and add an end date then save</li>\n<li>Data in other tabs is rolled up from FEPs ( Features/Epics/Phases)</li>\n</ol>"
   },
   {
    "fieldname": "cb001",
@@ -218,10 +220,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "s001",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "planned_deliverable",
    "fieldtype": "Table",
    "label": "Planned Deliverable",
@@ -229,7 +227,8 @@
   },
   {
    "fieldname": "s002",
-   "fieldtype": "Section Break"
+   "fieldtype": "Tab Break",
+   "label": "Progress"
   },
   {
    "fieldname": "latest_risk_calc",
@@ -276,20 +275,6 @@
    "fieldname": "forcast_opex_other",
    "fieldtype": "Currency",
    "label": "Forcast OpEx Other"
-  },
-  {
-   "fetch_from": "theme_key.company",
-   "fieldname": "company",
-   "fieldtype": "Data",
-   "label": "Company",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "theme_key.version",
-   "fieldname": "version",
-   "fieldtype": "Data",
-   "label": "Version",
-   "read_only": 1
   },
   {
    "fieldname": "section_break_10",
@@ -347,7 +332,7 @@
    "fetch_from": "theme_key.theme_brief",
    "fieldname": "theme_brief",
    "fieldtype": "Data",
-   "label": "Theme Brief",
+   "label": "Theme Brief (p)",
    "read_only": 1
   },
   {
@@ -358,7 +343,7 @@
   },
   {
    "fieldname": "planned_duration_weeks",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Planned Duration Weeks",
    "reqd": 1
   },
@@ -397,10 +382,35 @@
    "fieldname": "planned_end_date",
    "fieldtype": "Date",
    "label": "Planned End Date"
+  },
+  {
+   "fieldname": "deliverables_tab",
+   "fieldtype": "Tab Break",
+   "label": "Deliverables"
+  },
+  {
+   "fieldname": "html_49",
+   "fieldtype": "HTML",
+   "options": "<ol style=\"list-style: square; font-size: 10px; color: darkred; padding: 12px;\">\n<li>Actual start date = earliest child FEP (Feature/Epic/Phase) Actual start date</li>\n<li>Forecast duration = [ Now - Actual start date ]  + Todo FET critical path</li>\n<li>Planned Material and Other Spend are keyed here and not at FEP level</li></ol> "
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_50",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "theme_key.company",
+   "fetch_if_empty": 1,
+   "fieldname": "parent_company",
+   "fieldtype": "Data",
+   "label": "Parent Company"
   }
  ],
  "links": [],
- "modified": "2022-04-28 10:46:52.429542",
+ "modified": "2022-05-11 14:25:48.034090",
  "modified_by": "Administrator",
  "module": "Model",
  "name": "Initiative or Project",
